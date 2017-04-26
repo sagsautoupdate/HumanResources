@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="15.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3F1C1D37-F352-488F-9A43-44BF0CD3A1C3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HRMUtil</RootNamespace>
+    <AssemblyName>HRMUtil</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="clsEncDec.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="ExcelFile.cs" />
+    <Compile Include="FormatDate.cs" />
+    <Compile Include="HRMException.cs" />
+    <Compile Include="HtmlRemoval.cs" />
+    <Compile Include="KeyNames\H0\ContractTypeKeys.cs" />
+    <Compile Include="KeyNames\H0\DepartmentEmployeeKeys.cs" />
+    <Compile Include="KeyNames\H0\DepartmentKeys.cs" />
+    <Compile Include="KeyNames\H0\DepartmentPositionKeys.cs" />
+    <Compile Include="KeyNames\H0\EmployeeContractKeys.cs" />
+    <Compile Include="KeyNames\H0\EmployeeEducationLevelKeys.cs" />
+    <Compile Include="KeyNames\H0\EmployeeIdiFingerPrintKeys.cs" />
+    <Compile Include="KeyNames\H0\EmployeeJobHistoryKeys.cs" />
+    <Compile Include="KeyNames\H0\EmployeeKeys.cs" />
+    <Compile Include="KeyNames\H0\EmployeeLeaveKeys.cs" />
+    <Compile Include="KeyNames\H0\EmployeeRelationKeys.cs" />
+    <Compile Include="KeyNames\H0\EmployeeSubContractKeys.cs" />
+    <Compile Include="KeyNames\H0\EmployeeTimeBillKeys.cs" />
+    <Compile Include="KeyNames\H0\HolidayKeys.cs" />
+    <Compile Include="KeyNames\H0\LeaveTypeKeys.cs" />
+    <Compile Include="KeyNames\H0\PositionKeys.cs" />
+    <Compile Include="KeyNames\H0\RelationTypeKeys.cs" />
+    <Compile Include="KeyNames\H0\RoleKeys.cs" />
+    <Compile Include="KeyNames\H0\SiteMapKeyNames.cs" />
+    <Compile Include="KeyNames\H1\BonusEmployeeConditionKeys.cs" />
+    <Compile Include="KeyNames\H1\BonusEmployeesKeys.cs" />
+    <Compile Include="KeyNames\H1\BonusTitleKeys.cs" />
+    <Compile Include="KeyNames\H1\CoefficientEmployeeFinalKeys.cs" />
+    <Compile Include="KeyNames\H1\CoefficientEmployeeKeys.cs" />
+    <Compile Include="KeyNames\H1\CoefficientLevelKeys.cs" />
+    <Compile Include="KeyNames\H1\CoefficientNameKeys.cs" />
+    <Compile Include="KeyNames\H1\CoefficientNamePositionKeys.cs" />
+    <Compile Include="KeyNames\H1\CoefficientTypeKeys.cs" />
+    <Compile Include="KeyNames\H1\CoefficientValueKeys.cs" />
+    <Compile Include="KeyNames\H0\EmployeeContractCoefficientKeys.cs" />
+    <Compile Include="KeyNames\H1\HTCVCatalogueKeys.cs" />
+    <Compile Include="KeyNames\H1\HTCVEmployeeKeys.cs" />
+    <Compile Include="KeyNames\H1\IncomeEmployeesKeys.cs" />
+    <Compile Include="KeyNames\H1\LCB_CoefficientEmployeeKeys.cs" />
+    <Compile Include="KeyNames\H1\LNS_CoefficientEmployeeKeys.cs" />
+    <Compile Include="KeyNames\H1\PITDeductionKeys.cs" />
+    <Compile Include="KeyNames\H1\PregnantAllownceKeys.cs" />
+    <Compile Include="KeyNames\H1\SalaryRegulationKeys.cs" />
+    <Compile Include="KeyNames\H1\ScaleOfSalariesKeys.cs" />
+    <Compile Include="KeyNames\H1\UnitPriceDetailKeys.cs" />
+    <Compile Include="KeyNames\H1\WageFundKeys.cs" />
+    <Compile Include="KeyNames\H1\WorkdayEmployeeKeys.cs" />
+    <Compile Include="KeyNames\H1\WorkdayEmployeeLKeys.cs" />
+    <Compile Include="KeyNames\H1\WorkdayCoefficientEmployeesFinalKeys.cs" />
+    <Compile Include="KeyNames\H1\WorkdayPrivilageKeys.cs" />
+    <Compile Include="KeyNames\H2\CandidateEducationLevelKeys.cs" />
+    <Compile Include="KeyNames\H2\CandidatesKeys.cs" />
+    <Compile Include="KeyNames\H2\CandidateTrainingJobHistoryKeys.cs" />
+    <Compile Include="KeyNames\H2\EducationLevelKeys.cs" />
+    <Compile Include="KeyNames\H2\SessionKeys.cs" />
+    <Compile Include="KeyNames\H3\DecisionEmployeesKeys.cs" />
+    <Compile Include="KeyNames\H3\DecisionsKeys.cs" />
+    <Compile Include="KeyNames\H4\RepresentativeKeys.cs" />
+    <Compile Include="KeyNames\H\BonusNameKeys.cs" />
+    <Compile Include="KeyNames\H\BonusValueKeys.cs" />
+    <Compile Include="KeyNames\H\BulletinKeyNames.cs" />
+    <Compile Include="KeyNames\H\CoefficientKeys.cs" />
+    <Compile Include="KeyNames\H\CoefficientTypeKeys.cs" />
+    <Compile Include="KeyNames\H\CommandLogKeyNames.cs" />
+    <Compile Include="KeyNames\H\EmployeeIncomeKeys.cs" />
+    <Compile Include="KeyNames\H\IncomeMonthKeys.cs" />
+    <Compile Include="KeyNames\H\IncomeTypeKeys.cs" />
+    <Compile Include="KeyNames\H\TimeKeepingKeys.cs" />
+    <Compile Include="KeyNames\H\TimeKeepingTypeKeys.cs" />
+    <Compile Include="LeaveDate.cs" />
+    <Compile Include="PageUtil.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StringFormat.cs" />
+    <Compile Include="Unit.cs" />
+    <Compile Include="Util.cs" />
+    <Compile Include="XMLFile.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

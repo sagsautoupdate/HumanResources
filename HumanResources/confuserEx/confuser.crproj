@@ -1,0 +1,10 @@
+﻿<project outputDir="{OutputDir}" baseDir="{OutputDir}" xmlns="http://confuser.codeplex.com">
+  <rule pattern="true" preset="{Preset}" />
+  <module path="{ModuleName}">
+    <rule pattern="true" preset="{Preset}" />
+  </module>
+  <module path="D:\SAGS-Softwares\HumanResources\HRMBLL\bin\Release\HRMBLL.dll" />
+  <module path="D:\SAGS-Softwares\HumanResources\HRMDAL\bin\Release\HRMDAL.dll" />
+  <module path="D:\SAGS-Softwares\HumanResources\HRMUtil\bin\Release\HRMUtil.dll" />
+  <module path="D:\SAGS-Softwares\AESm\AESm\bin\Release\AESm.dll" />
+</project>

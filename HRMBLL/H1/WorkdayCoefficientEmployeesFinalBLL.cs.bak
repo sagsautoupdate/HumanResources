@@ -1,0 +1,1319 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Data;
+
+using HRMDAL.Utilities;
+using HRMDAL.H1;
+using HRMUtil.KeyNames.H1;
+using HRMUtil.KeyNames.H0;
+using HRMBLL.H1.Helper;
+using HRMUtil;
+using HRMBLL.H0;
+
+namespace HRMBLL.H1
+{
+    public class WorkdayCoefficientEmployeesFinalBLL
+    {
+
+        #region private fields
+        private long _WorkdayEmployeeIdFinal;
+        private int _UserId;
+        System.DateTime _DataDate;
+        private string _Day1;
+        private string _Day2;
+        private string _Day3;
+        private string _Day4;
+        private string _Day5;
+        private string _Day6;
+        private string _Day7;
+        private string _Day8;
+        private string _Day9;
+        private string _Day10;
+        private string _Day11;
+        private string _Day12;
+        private string _Day13;
+        private string _Day14;
+        private string _Day15;
+        private string _Day16;
+        private string _Day17;
+        private string _Day18;
+        private string _Day19;
+        private string _Day20;
+        private string _Day21;
+        private string _Day22;
+        private string _Day23;
+        private string _Day24;
+        private string _Day25;
+        private string _Day26;
+        private string _Day27;
+        private string _Day28;
+        private string _Day29;
+        private string _Day30;
+        private string _Day31;
+
+        private double _NCQD;
+        private double _NCDC;
+        private double _X;
+        private double _OmDNBHXH;
+        private double _Om;
+        private double _OmDN;
+        private double _KHH;
+        private double _Co;
+        private double _TS;
+        private double _ST;
+        private double _Khamthai;
+        private double _TNLD;
+        private double _F;
+        private double _Diduong;
+        private double _CTac;
+        private double _Fdb;
+        private double _H1;
+        private double _H2;
+        private double _H3;
+        private double _H4;
+        private double _H5;
+        private double _H6;
+        private double _H7;
+        private double _DinhChiCT;
+        private double _Ro;
+        private double _Ko;
+        private double _LamthemNTbngay;
+        private double _LamthemCNbngay;
+        private double _LamthemLTbngay;
+        private double _LamthemNTbdem;
+        private double _LamthemCNbdem;
+        private double _LamthemLTbdem;
+        private double _Lamdem;
+
+        private double _HSLNS;
+        private double _HSLNSPCTN;
+        private double _HSLCB;
+        private double _HSPCDH;
+        private double _HSPCTN;
+        private double _HSPCKV;
+        private double _HSPCCV;
+        private double _HSK;
+        private double _DTNopThue;
+        private double _NguoiPThuoc;
+
+        private DateTime _CreateDate;
+        private int _CreateUserId;
+        private DateTime _UpdateDate;
+        private int _UpdateUserId;
+        private string _Remark;
+
+        #endregion
+
+        #region properties
+
+        public long WorkdayEmployeeIdFinal
+        {
+            get
+            {
+                return _WorkdayEmployeeIdFinal;
+            }
+            set
+            {
+                _WorkdayEmployeeIdFinal = value;
+            }
+        }
+
+
+
+        public int UserId
+        {
+            get
+            {
+                return _UserId;
+            }
+            set
+            {
+                _UserId = value;
+            }
+        }
+
+
+
+        public System.DateTime DataDate
+        {
+            get
+            {
+                return _DataDate;
+            }
+            set
+            {
+                _DataDate = value;
+            }
+        }
+
+
+
+        public string Day1
+        {
+            get
+            {
+                return _Day1;
+            }
+            set
+            {
+                _Day1 = value;
+            }
+        }
+
+
+
+        public string Day2
+        {
+            get
+            {
+                return _Day2;
+            }
+            set
+            {
+                _Day2 = value;
+            }
+        }
+
+        
+        
+        public string Day3
+        {
+            get
+            {
+                    return _Day3;
+            }
+            set
+            {
+                _Day3 = value;
+            }
+        }
+
+
+
+        public string Day4
+        {
+            get
+            {
+                return _Day4;
+            }
+            set
+            {
+                _Day4 = value;
+            }
+        }
+
+
+
+        public string Day5
+        {
+            get
+            {
+                return _Day5;
+            }
+            set
+            {
+                _Day5 = value;
+            }
+        }
+
+
+        public string Day6
+        {
+            get
+            {
+                return _Day6;
+            }
+            set
+            {
+                _Day6 = value;
+            }
+        }
+
+        public string Day7
+        {
+            get
+            {
+                return _Day7;
+            }
+            set
+            {
+                _Day7 = value;
+            }
+        }
+
+
+        public string Day8
+        {
+            get
+            {
+                return _Day8;
+            }
+            set
+            {
+                _Day8 = value;
+            }
+        }
+
+        public string Day9
+        {
+            get
+            {
+                return _Day9;
+            }
+            set
+            {
+                _Day9 = value;
+            }
+        }
+
+        public string Day10
+        {
+            get
+            {
+                return _Day10;
+            }
+            set
+            {
+                _Day10 = value;
+            }
+        }
+
+
+        public string Day11
+        {
+            get
+            {
+                return _Day11;
+            }
+            set
+            {
+                _Day11 = value;
+            }
+        }
+
+        public string Day12
+        {
+            get
+            {
+                return _Day12;
+            }
+            set
+            {
+                _Day12 = value;
+            }
+        }
+
+        public string Day13
+        {
+            get
+            {
+                return _Day13;
+            }
+            set
+            {
+                _Day13 = value;
+            }
+        }
+
+        public string Day14
+        {
+            get
+            {
+                return _Day14;
+            }
+            set
+            {
+                _Day14 = value;
+            }
+        }
+
+        public string Day15
+        {
+            get
+            {
+                return _Day15;
+            }
+            set
+            {
+                _Day15 = value;
+            }
+        }
+
+        public string Day16
+        {
+            get
+            {
+                return _Day16;
+            }
+            set
+            {
+                _Day16 = value;
+            }
+        }
+
+        public string Day17
+        {
+            get
+            {
+                return _Day17;
+            }
+            set
+            {
+                _Day17 = value;
+            }
+        }
+
+        public string Day18
+        {
+            get
+            {
+                return _Day18;
+            }
+            set
+            {
+                _Day18 = value;
+            }
+        }
+
+        public string Day19
+        {
+            get
+            {
+                return _Day19;
+            }
+            set
+            {
+                _Day19 = value;
+            }
+        }
+
+        public string Day20
+        {
+            get
+            {
+                return _Day20;
+            }
+            set
+            {
+                _Day20 = value;
+            }
+        }
+
+        public string Day21
+        {
+            get
+            {
+                return _Day21;
+            }
+            set
+            {
+                _Day21 = value;
+            }
+        }
+
+        public string Day22
+        {
+            get
+            {
+                return _Day22;
+            }
+            set
+            {
+                _Day22 = value;
+            }
+        }
+
+
+
+        public string Day23
+        {
+            get
+            {
+                return _Day23;
+            }
+            set
+            {
+                _Day23 = value;
+            }
+        }
+
+        public string Day24
+        {
+            get
+            {
+                return _Day24;
+            }
+            set
+            {
+                _Day24 = value;
+            }
+        }
+
+
+        public string Day25
+        {
+            get
+            {
+                return _Day25;
+            }
+            set
+            {
+                _Day25 = value;
+            }
+        }
+
+        public string Day26
+        {
+            get
+            {
+                return _Day26;
+            }
+            set
+            {
+                _Day26 = value;
+            }
+        }
+
+        public string Day27
+        {
+            get
+            {
+                return _Day27;
+            }
+            set
+            {
+                _Day27 = value;
+            }
+        }        
+        
+        public string Day28
+        {
+            get
+            {
+                return _Day28;
+            }
+            set
+            {
+                _Day28 = value;
+            }
+        }
+        
+        public string Day29
+        {
+            get
+            {
+                return _Day29;
+            }
+            set
+            {
+                _Day29 = value;
+            }
+        }
+
+        public string Day30
+        {
+            get
+            {
+                return _Day30;
+            }
+            set
+            {
+                _Day30 = value;
+            }
+        }
+
+
+
+        public string Day31
+        {
+            get
+            {
+                return _Day31;
+            }
+            set
+            {
+                _Day31 = value;
+            }
+        }
+
+        public double NCQD
+        {
+            get
+            {
+                return _NCQD;
+            }
+            set
+            {
+                _NCQD = value;
+            }
+        }
+
+        public double NCDC
+        {
+            get
+            {
+                return _NCDC;
+            }
+            set
+            {
+                _NCDC = value;
+            }
+        }
+
+        public double X
+        {
+            get
+            {
+                return _X;
+            }
+            set
+            {
+                _X = value;
+            }
+        }
+
+        public double OmDNBHXH
+        {
+            get
+            {
+                return _OmDNBHXH;
+            }
+            set
+            {
+                _OmDNBHXH = value;
+            }
+        }
+
+        public double Om
+        {
+            get
+            {
+                return _Om;
+            }
+            set
+            {
+                _Om = value;
+            }
+        }
+
+        public double OmDN
+        {
+            get
+            {
+                return _OmDN;
+            }
+            set
+            {
+                _OmDN = value;
+            }
+        }
+                
+        public double KHH
+        {
+            get
+            {
+                return _KHH;
+            }
+            set
+            {
+                _KHH = value;
+            }
+        }
+
+        public double Co
+        {
+            get
+            {
+                return _Co;
+            }
+            set
+            {
+                _Co = value;
+            }
+        }
+
+        public double TS
+        {
+            get
+            {
+                return _TS;
+            }
+            set
+            {
+                _TS = value;
+            }
+        }
+
+        public double ST
+        {
+            get
+            {
+                return _ST;
+            }
+            set
+            {
+                _ST = value;
+            }
+        }
+
+        public double Khamthai
+        {
+            get
+            {
+                return _Khamthai;
+            }
+            set
+            {
+                _Khamthai = value;
+            }
+        }
+
+        public double TNLD
+        {
+            get
+            {
+                return _TNLD;
+            }
+            set
+            {
+                _TNLD = value;
+            }
+        }
+
+        public double F
+        {
+            get
+            {
+                return _F;
+            }
+            set
+            {
+                _F = value;
+            }
+        }
+
+        public double Diduong
+        {
+            get
+            {
+                return _Diduong;
+            }
+            set
+            {
+                _Diduong = value;
+            }
+        }
+
+        public double CTac
+        {
+            get
+            {
+                return _CTac;
+            }
+            set
+            {
+                _CTac = value;
+            }
+        }
+
+        public double Fdb
+        {
+            get
+            {
+                return _Fdb;
+            }
+            set
+            {
+                _Fdb = value;
+            }
+        }
+
+
+        public double H1
+        {
+            get
+            {
+                return _H1;
+            }
+            set
+            {
+                _H1 = value;
+            }
+        }
+
+        public double H2
+        {
+            get
+            {
+                return _H2;
+            }
+            set
+            {
+                _H2 = value;
+            }
+        }
+                
+        public double H3
+        {
+            get
+            {
+                return _H3;
+                
+            }
+            set
+            {
+                _H3 = value;
+            }
+        }
+
+        public double H4
+        {
+            get
+            {
+                return _H4;
+            }
+            set
+            {
+                _H4 = value;
+            }
+        }
+
+        public double H5
+        {
+            get
+            {
+                return _H5;
+            }
+            set
+            {
+                _H5 = value;
+            }
+        }               
+        
+        public double H6
+        {
+            get
+            {              
+                    return _H6;               
+            }
+            set
+            {
+                _H6 = value;
+            }
+        }
+
+        
+        
+        public double H7
+        {
+            get
+            {               
+                    return _H7;               
+            }
+            set
+            {
+                _H7 = value;
+            }
+        }
+
+        public double DinhChiCT
+        {
+            get
+            {
+                return _DinhChiCT;
+            }
+            set
+            {
+                _DinhChiCT = value;
+            }
+        }
+
+        public double Ro
+        {
+            get
+            {
+                return _Ro;
+            }
+            set
+            {
+                _Ro = value;
+            }
+        }
+
+        public double Ko
+        {
+            get
+            {
+                return _Ko;
+            }
+            set
+            {
+                _Ko = value;
+            }
+        }
+
+        public double LamthemNTbngay
+        {
+            get
+            {
+                return _LamthemNTbngay;
+            }
+            set
+            {
+                _LamthemNTbngay = value;
+            }
+        }
+
+        public double LamthemCNbngay
+        {
+            get
+            {
+                return _LamthemCNbngay;
+            }
+            set
+            {
+                _LamthemCNbngay = value;
+            }
+        }
+
+        public double LamthemLTbngay
+        {
+            get
+            {
+                return _LamthemLTbngay;
+            }
+            set
+            {
+                _LamthemLTbngay = value;
+            }
+        }
+
+        public double LamthemNTbdem
+        {
+            get
+            {
+                return _LamthemNTbdem;
+            }
+            set
+            {
+                _LamthemNTbdem = value;
+            }
+        }
+
+        public double LamthemCNbdem
+        {
+            get
+            {
+                return _LamthemCNbdem;
+            }
+            set
+            {
+                _LamthemCNbdem = value;
+            }
+        }
+
+        public double LamthemLTbdem
+        {
+            get
+            {
+                return _LamthemLTbdem;
+            }
+            set
+            {
+                _LamthemLTbdem = value;
+            }
+        }
+
+        public double Lamdem
+        {
+            get
+            {
+                return _Lamdem;
+            }
+            set
+            {
+                _Lamdem = value;
+            }
+        }
+
+        public double HSLNS
+        {
+            get
+            {
+                return _HSLNS;
+            }
+            set
+            {
+                _HSLNS = value;
+            }
+        }
+
+        public double HSLNSPCTN
+        {
+            get
+            {
+                return _HSLNSPCTN;
+            }
+            set
+            {
+                _HSLNSPCTN = value;
+            }
+        }
+
+        public double HSLCB
+        {
+            get
+            {
+                return _HSLCB;
+            }
+            set
+            {
+                _HSLCB = value;
+            }
+        }
+
+        public double HSPCDH
+        {
+            get
+            {
+                return _HSPCDH;
+            }
+            set
+            {
+                _HSPCDH = value;
+            }
+        }
+
+        public double HSPCTN
+        {
+            get
+            {
+                return _HSPCTN;
+            }
+            set
+            {
+                _HSPCTN = value;
+            }
+        }
+
+        public double HSPCKV
+        {
+            get
+            {
+                return _HSPCKV;
+            }
+            set
+            {
+                _HSPCKV = value;
+            }
+        }
+
+        public double HSPCCV
+        {
+            get
+            {
+                return _HSPCCV;
+            }
+            set
+            {
+                _HSPCCV = value;
+            }
+        }
+
+        public double HSK
+        {
+            get
+            {
+                return _HSK;
+            }
+            set
+            {
+                _HSK = value;
+            }
+        }
+
+        public double DTNopThue
+        {
+            get
+            {
+                return _DTNopThue;
+            }
+            set
+            {
+                _DTNopThue = value;
+            }
+        }
+
+        public double NguoiPThuoc
+        {
+            get
+            {
+                return _NguoiPThuoc;
+            }
+            set
+            {
+                _NguoiPThuoc = value;
+            }
+        }
+
+
+        public System.DateTime CreateDate
+        {
+            get
+            {
+                return _CreateDate;
+            }
+            set
+            {
+                _CreateDate = value;
+            }
+        }
+
+        public int CreateUserId
+        {
+            get
+            {
+                return _CreateUserId;
+            }
+            set
+            {
+                _CreateUserId = value;
+            }
+        }
+
+        public System.DateTime UpdateDate
+        {
+            get
+            {
+                return _UpdateDate;
+            }
+            set
+            {
+                _UpdateDate = value;
+            }
+        }
+
+        public int UpdateUserId
+        {
+            get
+            {
+                return -UpdateUserId;
+            }
+            set
+            {
+                _UpdateUserId = value;
+            }
+        }
+
+        public string Remark
+        {
+            get
+            {
+                return _Remark;
+            }
+            set
+            {
+                _Remark = value;
+            }
+        }
+
+        #endregion
+
+        public static long ImportFromExcelACV(string ACVId, DateTime DataDate, string Day1, string Day2, string Day3, string Day4, string Day5, string Day6, string Day7, string Day8, string Day9, string Day10,
+                          string Day11, string Day12, string Day13, string Day14, string Day15, string Day16, string Day17, string Day18, string Day19, string Day20,
+                          string Day21, string Day22, string Day23, string Day24, string Day25, string Day26, string Day27, string Day28, string Day29, string Day30, string Day31,
+                          double NCQD, double NCDC, double X, double OmDNBHXH, double Om, double OmDN, double KHH, double Co, double TS, double ST, double Khamthai, double TNLD, double F, double Diduong, double CTac, double Fdb,
+                          double H1, double H2, double H3, double H4, double H5, double H6, double H7, double DinhChiCT, double Ro, double Ko, double LamthemNTbngay, double LamthemCNbngay, double LamthemLTbngay, double LamthemNTbdem,
+                          double LamthemCNbdem, double LamthemLTbdem, double Lamdem,
+                          double HSLNS, double HSLNSPCTN, double HSLCB, double HSPCDH, double HSPCTN, double HSPCKV, double HSPCCV, double HSK, double DTNopThue, double NguoiPThuoc,  
+                          DateTime CreateDate, int CreateUserId, DateTime UpdateDate, int UpdateUserId, string Remark, int UserId)
+        {
+            return new WorkdayCoefficientEmployeesFinalDAL().ImportFromExcelACV(ACVId, DataDate, Day1, Day2, Day3, Day4, Day5, Day6, Day7, Day8, Day9, Day10,
+                          Day11, Day12, Day13, Day14, Day15, Day16, Day17, Day18, Day19, Day20, Day21, Day22, Day23, Day24, Day25, Day26, Day27, Day28, Day29, Day30, Day31,
+                          NCQD, NCDC, X, OmDNBHXH, Om, OmDN, KHH, Co, TS, ST, Khamthai, TNLD, F, Diduong, CTac, Fdb, H1, H2, H3, H4, H5, H6, H7, DinhChiCT, Ro, Ko, LamthemNTbngay, LamthemCNbngay, LamthemLTbngay, LamthemNTbdem,
+                          LamthemCNbdem, LamthemLTbdem, Lamdem, HSLNS, HSLNSPCTN, HSLCB, HSPCDH, HSPCTN, HSPCKV, HSPCCV, HSK, DTNopThue, NguoiPThuoc, CreateDate, CreateUserId, UpdateDate, UpdateUserId, Remark, UserId);
+        }
+
+        public static long UpdateByCalculateConversionCoefficient(double NCHLNS, double HSQDNCHL, double HSTLNS, DateTime DataDate, DateTime UpdateDate, int UpdateUserId, string Remark, int UserId)
+        {
+            return new WorkdayCoefficientEmployeesFinalDAL().UpdateByCalculateConversionCoefficient(NCHLNS, HSQDNCHL, HSTLNS, DataDate, UpdateDate, UpdateUserId, Remark, UserId);
+        }
+
+        public static DataTable GetByDataDate(DateTime dataDate, int IsVCQLNC)
+        {
+            return new WorkdayCoefficientEmployeesFinalDAL().GetByDataDate(dataDate, IsVCQLNC);
+        }
+        public static DataTable GetByDataDateForDetail(DateTime dataDate, int IsVCQLNC)
+        {
+            return new WorkdayCoefficientEmployeesFinalDAL().GetByDataDateForDetail(dataDate, IsVCQLNC);
+        }
+
+
+        #region private methods
+
+
+        private static List<WorkdayCoefficientEmployeesFinalBLL> GenerateListWorkdayEmployeesBLLFinalFromDataTable(DataTable dt)
+        {
+            List<WorkdayCoefficientEmployeesFinalBLL> list = new List<WorkdayCoefficientEmployeesFinalBLL>();
+
+            foreach (DataRow dr in dt.Rows)
+            {
+                list.Add(GenerateWorkdayEmployeesBLLFinalFromDataRow(dr));
+            }
+
+            return list;
+        }
+
+        private static WorkdayCoefficientEmployeesFinalBLL GenerateWorkdayEmployeesBLLFinalFromDataRow(DataRow dr)
+        {
+
+            WorkdayCoefficientEmployeesFinalBLL objBLL = new WorkdayCoefficientEmployeesFinalBLL();
+
+            objBLL._WorkdayEmployeeIdFinal = dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_WorkdayCoefficientEmployeeFinalId] == DBNull.Value ? 0 : long.Parse(dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_WorkdayCoefficientEmployeeFinalId].ToString());
+            objBLL._UserId = dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_UserId] == DBNull.Value ? 0 : int.Parse(dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_UserId].ToString());
+            objBLL._DataDate = dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_DataDate] == DBNull.Value ? FormatDate.GetSQLDateMinValue : Convert.ToDateTime(dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_DataDate].ToString());
+
+            //try
+            //{
+            //    objBLL._EmployeeCode = dr[EmployeeKeys.FIELD_EMPLOYEES_EMPLOYEE_CODE] == DBNull.Value ? string.Empty : dr[EmployeeKeys.FIELD_EMPLOYEES_EMPLOYEE_CODE].ToString();
+            //}
+            //catch { }
+            //objBLL._FullName = dr[EmployeeKeys.FIELD_EMPLOYEES_FULLNAME] == DBNull.Value ? string.Empty : dr[EmployeeKeys.FIELD_EMPLOYEES_FULLNAME].ToString();
+            //objBLL._DepartmentId = dr[DepartmentKeys.FIELD_DEPARTMENT_ID] == DBNull.Value ? 0 : int.Parse(dr[DepartmentKeys.FIELD_DEPARTMENT_ID].ToString());
+            //objBLL._DepartmentName = dr[DepartmentKeys.FIELD_DEPARTMENT_NAME] == DBNull.Value ? string.Empty : dr[DepartmentKeys.FIELD_DEPARTMENT_NAME].ToString();
+            //objBLL._DepartmentFullName = dr[DepartmentKeys.Field_Department_DepartmentFullName] == DBNull.Value ? string.Empty : dr[DepartmentKeys.Field_Department_DepartmentFullName].ToString();
+            //objBLL._RootId = dr[DepartmentKeys.FIELD_DEPARTMENT_ROOT_ID] == DBNull.Value ? 0 : int.Parse(dr[DepartmentKeys.FIELD_DEPARTMENT_ROOT_ID].ToString());
+            //try
+            //{
+            //    objBLL._RootName = dr[DepartmentKeys.Field_Department_RootName] == DBNull.Value ? string.Empty : dr[DepartmentKeys.Field_Department_RootName].ToString();
+            //}
+            //catch { }
+            //try
+            //{
+            //    objBLL._PositionName = dr[PositionKeys.FIELD_POSITION_NAME] == DBNull.Value ? string.Empty : dr[PositionKeys.FIELD_POSITION_NAME].ToString();
+            //}
+            //catch { }
+
+            #region TimeKeeping
+
+            objBLL._Day1 = dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Day1] == DBNull.Value ? string.Empty : dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Day1].ToString();
+            objBLL._Day2 = dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Day2] == DBNull.Value ? string.Empty : dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Day2].ToString();
+            objBLL._Day3 = dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Day3] == DBNull.Value ? string.Empty : dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Day3].ToString();
+            objBLL._Day4 = dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Day4] == DBNull.Value ? string.Empty : dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Day4].ToString();
+            objBLL._Day5 = dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Day5] == DBNull.Value ? string.Empty : dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Day5].ToString();
+            objBLL._Day6 = dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Day6] == DBNull.Value ? string.Empty : dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Day6].ToString();
+            objBLL._Day7 = dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Day7] == DBNull.Value ? string.Empty : dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Day7].ToString();
+            objBLL._Day8 = dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Day8] == DBNull.Value ? string.Empty : dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Day8].ToString();
+            objBLL._Day9 = dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Day9] == DBNull.Value ? string.Empty : dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Day9].ToString();
+            objBLL._Day10 = dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Day10] == DBNull.Value ? string.Empty : dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Day10].ToString();
+            objBLL._Day11 = dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Day11] == DBNull.Value ? string.Empty : dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Day11].ToString();
+            objBLL._Day12 = dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Day12] == DBNull.Value ? string.Empty : dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Day12].ToString();
+            objBLL._Day13 = dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Day13] == DBNull.Value ? string.Empty : dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Day13].ToString();
+            objBLL._Day14 = dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Day14] == DBNull.Value ? string.Empty : dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Day14].ToString();
+            objBLL._Day15 = dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Day15] == DBNull.Value ? string.Empty : dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Day15].ToString();
+            objBLL._Day16 = dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Day16] == DBNull.Value ? string.Empty : dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Day16].ToString();
+            objBLL._Day17 = dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Day17] == DBNull.Value ? string.Empty : dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Day17].ToString();
+            objBLL._Day18 = dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Day18] == DBNull.Value ? string.Empty : dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Day18].ToString();
+            objBLL._Day19 = dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Day19] == DBNull.Value ? string.Empty : dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Day19].ToString();
+            objBLL._Day20 = dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Day20] == DBNull.Value ? string.Empty : dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Day20].ToString();
+            objBLL._Day21 = dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Day21] == DBNull.Value ? string.Empty : dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Day21].ToString();
+            objBLL._Day22 = dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Day22] == DBNull.Value ? string.Empty : dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Day22].ToString();
+            objBLL._Day23 = dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Day23] == DBNull.Value ? string.Empty : dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Day23].ToString();
+            objBLL._Day24 = dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Day24] == DBNull.Value ? string.Empty : dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Day24].ToString();
+            objBLL._Day25 = dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Day25] == DBNull.Value ? string.Empty : dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Day25].ToString();
+            objBLL._Day26 = dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Day26] == DBNull.Value ? string.Empty : dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Day26].ToString();
+            objBLL._Day27 = dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Day27] == DBNull.Value ? string.Empty : dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Day27].ToString();
+            objBLL._Day28 = dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Day28] == DBNull.Value ? string.Empty : dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Day28].ToString();
+            objBLL._Day29 = dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Day29] == DBNull.Value ? string.Empty : dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Day29].ToString();
+            objBLL._Day30 = dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Day30] == DBNull.Value ? string.Empty : dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Day30].ToString();
+            objBLL._Day31 = dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Day31] == DBNull.Value ? string.Empty : dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Day31].ToString();
+
+
+            #endregion
+
+            #region To Collect WorkdayEmplyee
+
+            objBLL._NCQD = dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_NCQD] == DBNull.Value ? 0 : double.Parse(dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_NCQD].ToString());
+            objBLL._NCDC = dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_NCDC] == DBNull.Value ? 0 : double.Parse(dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_NCDC].ToString());
+            objBLL._X = dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_X] == DBNull.Value ? 0 : double.Parse(dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_X].ToString());
+            objBLL._OmDNBHXH = dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_OmDNBHXH] == DBNull.Value ? 0 : double.Parse(dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_OmDNBHXH].ToString());
+            objBLL._Om = dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Om] == DBNull.Value ? 0 : double.Parse(dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Om].ToString());
+            objBLL._OmDN = dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_OmDN] == DBNull.Value ? 0 : double.Parse(dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_OmDN].ToString());
+            objBLL._KHH = dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_KHH] == DBNull.Value ? 0 : double.Parse(dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_KHH].ToString());
+            objBLL._Co = dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Co] == DBNull.Value ? 0 : double.Parse(dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Co].ToString());
+            objBLL._TS = dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_TS] == DBNull.Value ? 0 : double.Parse(dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_TS].ToString());
+            objBLL._ST = dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_ST] == DBNull.Value ? 0 : double.Parse(dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_ST].ToString());
+            objBLL._Khamthai = dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Khamthai] == DBNull.Value ? 0 : double.Parse(dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Khamthai].ToString());
+            objBLL._TNLD = dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_TNLD] == DBNull.Value ? 0 : double.Parse(dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_TNLD].ToString());
+            objBLL._F = dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_F] == DBNull.Value ? 0 : double.Parse(dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_F].ToString());
+            objBLL._Diduong = dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Diduong] == DBNull.Value ? 0 : double.Parse(dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Diduong].ToString());
+            objBLL._CTac = dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_CTac] == DBNull.Value ? 0 : double.Parse(dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_CTac].ToString());
+            objBLL._Fdb = dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Fdb] == DBNull.Value ? 0 : double.Parse(dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Fdb].ToString());
+            objBLL._H1 = dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_H1] == DBNull.Value ? 0 : double.Parse(dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_H1].ToString());
+            objBLL._H2 = dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_H2] == DBNull.Value ? 0 : double.Parse(dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_H2].ToString());
+            objBLL._H3 = dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_H3] == DBNull.Value ? 0 : double.Parse(dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_H3].ToString());
+            objBLL._H4 = dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_H4] == DBNull.Value ? 0 : double.Parse(dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_H4].ToString());
+            objBLL._H5 = dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_H5] == DBNull.Value ? 0 : double.Parse(dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_H5].ToString());
+            objBLL._H6 = dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_H6] == DBNull.Value ? 0 : double.Parse(dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_H6].ToString());
+            objBLL._H7 = dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_H7] == DBNull.Value ? 0 : double.Parse(dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_H7].ToString());
+            objBLL._DinhChiCT = dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_DinhChiCT] == DBNull.Value ? 0 : double.Parse(dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_DinhChiCT].ToString());
+            objBLL._Ro = dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Ro] == DBNull.Value ? 0 : double.Parse(dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Ro].ToString());
+            objBLL._Ko = dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Ko] == DBNull.Value ? 0 : double.Parse(dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Ko].ToString());
+            objBLL._LamthemNTbngay = dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_LamthemNTbngay] == DBNull.Value ? 0 : double.Parse(dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_LamthemNTbngay].ToString());
+            objBLL._LamthemCNbngay = dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_LamthemCNbngay] == DBNull.Value ? 0 : double.Parse(dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_LamthemCNbngay].ToString());
+            objBLL._LamthemLTbngay = dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_LamthemLTbngay] == DBNull.Value ? 0 : double.Parse(dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_LamthemLTbngay].ToString());
+            objBLL._LamthemNTbdem = dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_LamthemNTbdem] == DBNull.Value ? 0 : double.Parse(dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_LamthemNTbdem].ToString());
+            objBLL._LamthemCNbdem = dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_LamthemCNbdem] == DBNull.Value ? 0 : double.Parse(dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_LamthemCNbdem].ToString());
+            objBLL._LamthemLTbdem = dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_LamthemLTbdem] == DBNull.Value ? 0 : double.Parse(dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_LamthemLTbdem].ToString());
+            objBLL._Lamdem = dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Lamdem] == DBNull.Value ? 0 : double.Parse(dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Lamdem].ToString());
+            #endregion
+
+
+            //objBLL._NightTimeL = dr[WorkdayEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_NightTimeL] == DBNull.Value ? 0 : double.Parse(dr[WorkdayEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_NightTimeL].ToString());
+            //objBLL._MarkL = dr[WorkdayEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_MarkL] == DBNull.Value ? 0 : double.Parse(dr[WorkdayEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_MarkL].ToString());
+            //objBLL._RankL = DefaultValues.HTCV(objBLL._MarkL);//dr[WorkdayEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_RankL] == DBNull.Value ? string.Empty : dr[WorkdayEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Rank].ToString();
+
+            objBLL._CreateDate = dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_CreateDate] == DBNull.Value ? FormatDate.GetSQLDateMinValue : Convert.ToDateTime(dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_CreateDate].ToString());
+            objBLL._CreateUserId = dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_CreateUserId] == DBNull.Value ? 0 : int.Parse(dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_CreateUserId].ToString());
+            //objBLL._CreateUserNameL = dr[WorkdayEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_CreateUserNameL] == DBNull.Value ? "" : dr[WorkdayEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_CreateUserName].ToString();
+            //objBLL._CreateFullNameL = dr[WorkdayEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_CreateFullNameL] == DBNull.Value ? "" : dr[WorkdayEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_CreateFullName].ToString();
+
+            objBLL._UpdateDate = dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_UpdateDate] == DBNull.Value ? FormatDate.GetSQLDateMinValue : Convert.ToDateTime(dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_UpdateDate].ToString());
+            objBLL._UpdateUserId = dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_UpdateUserId] == DBNull.Value ? 0 : int.Parse(dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_UpdateUserId].ToString());
+            //objBLL._UpdateUserNameL = dr[WorkdayEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_UpdateUserNameL] == DBNull.Value ? "" : dr[WorkdayEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_UpdateUserName].ToString();
+            //objBLL._UpdateFullNameL = dr[WorkdayEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_UpdateFullNameL] == DBNull.Value ? "" : dr[WorkdayEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_UpdateFullName].ToString();
+
+            //objBLL._TypeL = dr[WorkdayEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_TypeL] == DBNull.Value ? 0 : int.Parse(dr[WorkdayEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_TypeL].ToString());
+
+
+            //objBLL._F_O_Co_KHHDS_TNLDL = objBLL._F_OmL + objBLL._F_Con_OmL + objBLL._F_KHHDSL + objBLL._F_TNLDL;
+            //objBLL._F_Nam_Fdb_DDL = objBLL._F_NamL + objBLL._F_dbL + objBLL._F_DiDuongL;
+            //objBLL._F_HocL = objBLL._F_HocSAGSL + objBLL._F_Hoc1L + objBLL._F_Hoc2L + objBLL._F_Hoc3L + objBLL._F_Hoc4L + objBLL._F_Hoc5L + objBLL._F_Hoc6L + objBLL._F_Hoc7L;
+            //objBLL._F_KhacL = objBLL._F_LeL + objBLL._F_KoLuongCLDL + objBLL._F_KoLuongKLDL + objBLL._ChuaDiLamL + objBLL._F_SayThaiL;
+
+            //objBLL._NghiTuan_NghiBuL = objBLL._NghiTuanL + objBLL._NghiBuL;
+
+            objBLL._Remark = dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Remark] == DBNull.Value ? string.Empty : dr[WorkdayCoefficientEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_Remark].ToString();
+
+            //objBLL._StatusL = dr[WorkdayEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_StatusL] == DBNull.Value ? 0 : int.Parse(dr[WorkdayEmployeesFinalKeys.Field_WorkdayCoefficientEmployeesFinal_StatusL].ToString());
+
+            //try
+            //{
+            //    objBLL._LeaveStatus = dr["LeaveStatus"] == DBNull.Value ? 0 : int.Parse(dr["LeaveStatus"].ToString());
+            //}
+            //catch { }
+            //try
+            //{
+            //    objBLL._LeaveDate = dr["LeaveDate"] == DBNull.Value ? FormatDate.GetSQLDateMinValue : Convert.ToDateTime(dr["LeaveDate"].ToString());
+            //}
+            //catch { }
+
+
+            return objBLL;
+        }
+        
+        #endregion
+
+    }
+}

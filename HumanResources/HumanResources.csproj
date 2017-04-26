@@ -1,0 +1,1256 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{17026B13-850E-4D8A-9C12-FB7389F755C9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HumanResources</RootNamespace>
+    <AssemblyName>HumanResources</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <PublishUrl>D:\GitHub\SAGSSoftwareUpdate\HumanResources\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>https://raw.githubusercontent.com/sagsautoupdate/SAGSSoftwareUpdate/master/HumanResources/</InstallUrl>
+    <UpdateUrl>https://raw.githubusercontent.com/sagsautoupdate/SAGSSoftwareUpdate/master/HumanResources/</UpdateUrl>
+    <ProductName>HumanResources</ProductName>
+    <PublisherName>SAGS</PublisherName>
+    <SuiteName>SAGS</SuiteName>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>HumanResources.htm</WebPage>
+    <ApplicationRevision>386</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>obj\x86\Release\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DocumentationFile>
+    </DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>CC0E68C3D51B69747822030784B929B8DA269C26</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>TVTG.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>HumanResources.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon-hrm2014.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <DelaySign>false</DelaySign>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>TVTG.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="adodb, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\HumanResources-DAD\DLL\adodb.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Interop.ADOX">
+      <HintPath>..\..\HumanResources-DAD\DLL\Interop.ADOX.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.Excel">
+      <HintPath>..\DLL\Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.WinControls, Version=2017.1.221.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2017.1.221.40\Telerik.WinControls.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.ChartView, Version=2017.1.221.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.GridView, Version=2017.1.221.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2017.1.221.40\Telerik.WinControls.GridView.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.RadDock, Version=2017.1.221.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2017.1.221.40\Telerik.WinControls.RadDock.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.UI, Version=2017.1.221.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2017.1.221.40\Telerik.WinControls.UI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="TelerikCommon, Version=2017.1.221.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2017.1.221.40\TelerikCommon.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Administrations\ChangedLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrations\ChangedLog.Designer.cs">
+      <DependentUpon>ChangedLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="clsGlobal.cs" />
+    <Compile Include="Forms\Bonus\Export\BonusEmployeeExport.cs" />
+    <Compile Include="Forms\Bonus\frm_Calculate_Bonus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Bonus\frm_Calculate_Bonus.Designer.cs">
+      <DependentUpon>frm_Calculate_Bonus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Bonus\frm_Bonus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Bonus\frm_Bonus.Designer.cs">
+      <DependentUpon>frm_Bonus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Bonus\frm_ExportBonus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Bonus\frm_ExportBonus.Designer.cs">
+      <DependentUpon>frm_ExportBonus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Bonus\frm_ImportBonus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Bonus\frm_ImportBonus.Designer.cs">
+      <DependentUpon>frm_ImportBonus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Catalogue\frm_ContractType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Catalogue\frm_ContractType.Designer.cs">
+      <DependentUpon>frm_ContractType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Catalogue\frm_Department.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Catalogue\frm_Department.Designer.cs">
+      <DependentUpon>frm_Department.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Catalogue\frm_Family.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Catalogue\frm_Family.Designer.cs">
+      <DependentUpon>frm_Family.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Catalogue\frm_Positions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Catalogue\frm_Positions.Designer.cs">
+      <DependentUpon>frm_Positions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Catalogue\frm_Family_Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Catalogue\frm_Family_Add.Designer.cs">
+      <DependentUpon>frm_Family_Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Catalogue\frm_LNSCoefficient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Catalogue\frm_LNSCoefficient.Designer.cs">
+      <DependentUpon>frm_LNSCoefficient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Catalogue\frm_ScaleOfSalary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Catalogue\frm_ScaleOfSalary.Designer.cs">
+      <DependentUpon>frm_ScaleOfSalary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Catalogue\frm_Positions_Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Catalogue\frm_Positions_Add.Designer.cs">
+      <DependentUpon>frm_Positions_Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Catalogue\frm_ScaleOfSalary_Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Catalogue\frm_ScaleOfSalary_Add.Designer.cs">
+      <DependentUpon>frm_ScaleOfSalary_Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Coefficient\frm_Apply_LNSEmployeeToWorkdayFinal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Coefficient\frm_Apply_LNSEmployeeToWorkdayFinal.Designer.cs">
+      <DependentUpon>frm_Apply_LNSEmployeeToWorkdayFinal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Coefficient\frm_LNSEmployeeCoefficient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Coefficient\frm_LNSEmployeeCoefficient.Designer.cs">
+      <DependentUpon>frm_LNSEmployeeCoefficient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Contract\Contract\frm_List_Contract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Contract\Contract\frm_List_Contract.Designer.cs">
+      <DependentUpon>frm_List_Contract.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Contract\Contract\frm_Add_EmployeeContract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Contract\Contract\frm_Add_EmployeeContract.Designer.cs">
+      <DependentUpon>frm_Add_EmployeeContract.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Employees\frm_Add_SecurityControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Employees\frm_Add_SecurityControl.Designer.cs">
+      <DependentUpon>frm_Add_SecurityControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Employees\frm_Employee_Detail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Employees\frm_Employee_Detail.Designer.cs">
+      <DependentUpon>frm_Employee_Detail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Employees\frm_Employee_Detail_B1024.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Employees\frm_Employee_Detail_B1024.Designer.cs">
+      <DependentUpon>frm_Employee_Detail_B1024.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Employees\frm_Employee_Working.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Employees\frm_Employee_Working.Designer.cs">
+      <DependentUpon>frm_Employee_Working.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Employees\frm_Import_EmployeeSecurityControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Employees\frm_Import_EmployeeSecurityControl.Designer.cs">
+      <DependentUpon>frm_Import_EmployeeSecurityControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Employees\frm_SecurityControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Employees\frm_SecurityControl.Designer.cs">
+      <DependentUpon>frm_SecurityControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Employees\frm_SecurityControlHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Employees\frm_SecurityControlHistory.Designer.cs">
+      <DependentUpon>frm_SecurityControlHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Export\CustomExport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Export\CustomExport.Designer.cs">
+      <DependentUpon>CustomExport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Export\Employee\frm_Export_EmployeeSubContractList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Export\Employee\frm_Export_EmployeeSubContractList.Designer.cs">
+      <DependentUpon>frm_Export_EmployeeSubContractList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Export\Employee\frm_Export_Employees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Export\Employee\frm_Export_Employees.Designer.cs">
+      <DependentUpon>frm_Export_Employees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Export\Employee\frm_Export_EmployeeContractList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Export\Employee\frm_Export_EmployeeContractList.Designer.cs">
+      <DependentUpon>frm_Export_EmployeeContractList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Export\Employee\frm_Export_SecurityControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Export\Employee\frm_Export_SecurityControl.Designer.cs">
+      <DependentUpon>frm_Export_SecurityControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Export\Workingday\frm_Export_Workingday.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Export\Workingday\frm_Export_Workingday.Designer.cs">
+      <DependentUpon>frm_Export_Workingday.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Salary\Export\IncomeEmployeeExport.cs" />
+    <Compile Include="Forms\Salary\frm_CalculateConversionCoefficient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Salary\frm_CalculateConversionCoefficient.Designer.cs">
+      <DependentUpon>frm_CalculateConversionCoefficient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Salary\frm_CalculateSalary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Salary\frm_CalculateSalary.Designer.cs">
+      <DependentUpon>frm_CalculateSalary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Salary\frm_CalculateWageFund.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Salary\frm_CalculateWageFund.Designer.cs">
+      <DependentUpon>frm_CalculateWageFund.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Salary\frm_Compare_ListIncomeEmployees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Salary\frm_Compare_ListIncomeEmployees.Designer.cs">
+      <DependentUpon>frm_Compare_ListIncomeEmployees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Salary\frm_ExportSalary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Salary\frm_ExportSalary.Designer.cs">
+      <DependentUpon>frm_ExportSalary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Salary\frm_ImportSalary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Salary\frm_ImportSalary.Designer.cs">
+      <DependentUpon>frm_ImportSalary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Salary\frm_ListIncomeEmployees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Salary\frm_ListIncomeEmployees.Designer.cs">
+      <DependentUpon>frm_ListIncomeEmployees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Salary\frm_ListWageFund.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Salary\frm_ListWageFund.Designer.cs">
+      <DependentUpon>frm_ListWageFund.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Statistic\frm_Statistic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Statistic\frm_Statistic.Designer.cs">
+      <DependentUpon>frm_Statistic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Workingday\Export\CoefficientEmployeeFinalExport.cs" />
+    <Compile Include="Forms\Workingday\frm_AnimatedProgressIndicator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Workingday\frm_AnimatedProgressIndicator.Designer.cs">
+      <DependentUpon>frm_AnimatedProgressIndicator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Workingday\frm_ExportWorkingday.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Workingday\frm_ExportWorkingday.Designer.cs">
+      <DependentUpon>frm_ExportWorkingday.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Workingday\frm_ImportWorkingday.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Workingday\frm_ImportWorkingday.Designer.cs">
+      <DependentUpon>frm_ImportWorkingday.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Workingday\f_Background.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Workingday\f_Background.Designer.cs">
+      <DependentUpon>f_Background.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\frm_DataServer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\frm_DataServer.Designer.cs">
+      <DependentUpon>frm_DataServer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Progress\frm_Waiting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Progress\frm_Waiting.Designer.cs">
+      <DependentUpon>frm_Waiting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Progress\sf_Background.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Progress\sf_Background.Designer.cs">
+      <DependentUpon>sf_Background.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Progress\frm_ProgressForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Progress\frm_ProgressForm.Designer.cs">
+      <DependentUpon>frm_ProgressForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\CXR\Contract\CXR_Contract.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CXR_Contract.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\CXR\Contract\CXR_Contract_Trial.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CXR_Contract_Trial.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\CXR\Contract\CXR_Contract_Under3M.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CXR_Contract_Under3M.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\CXR\Contract\CXR_Subcontract_Contract.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CXR_Subcontract_Contract.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\CXR\Recruitment\CXR_Education_Contract.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CXR_Education_Contract.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\DAD\Contract\DAD_Contract.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DAD_Contract.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\DAD\Contract\DAD_Contract_Trial.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DAD_Contract_Trial.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\DAD\Contract\DAD_Contract_Under3M.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DAD_Contract_Under3M.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\DAD\Contract\DAD_Subcontract_Contract.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DAD_Subcontract_Contract.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\DAD\Recruitment\DAD_Education_Contract.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DAD_Education_Contract.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Utilities\DateTimeDayOfMonthExtensions.cs" />
+    <Compile Include="Utilities\DateTimeSpan.cs" />
+    <Compile Include="Utilities\DPI_Per_Monitor.cs" />
+    <Compile Include="Utilities\GridProgressCellElement.cs" />
+    <Compile Include="Utilities\GridViewProgressColumn.cs" />
+    <Compile Include="Utilities\LeaveNameExport.cs" />
+    <Compile Include="Forms\Recruitment\Candidate\PreEmployee\frm_Pre_Employee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Recruitment\Candidate\PreEmployee\frm_Pre_Employee.Designer.cs">
+      <DependentUpon>frm_Pre_Employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Workingday\frm_CheckSend.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Workingday\frm_CheckSend.Designer.cs">
+      <DependentUpon>frm_CheckSend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Workingday\frm_ERROR_WorkingDay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Workingday\frm_ERROR_WorkingDay.Designer.cs">
+      <DependentUpon>frm_ERROR_WorkingDay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Workingday\Helper\CheckBoxHeaderCell.cs" />
+    <Compile Include="Forms\Workingday\Helper\Checker.cs" />
+    <Compile Include="Forms\Workingday\Helper\CustomCheckBoxColumn.cs" />
+    <Compile Include="Forms\Workingday\frm_WorkingdayFinalDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Workingday\frm_WorkingdayFinalDetail.Designer.cs">
+      <DependentUpon>frm_WorkingdayFinalDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Workingday\Helper\WORKDAYERROR.cs" />
+    <Compile Include="ListSheet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListSheet.Designer.cs">
+      <DependentUpon>ListSheet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Login\frm_RLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\frm_RLogin.Designer.cs">
+      <DependentUpon>frm_RLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SGN\Contract\Contract_Under3M.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Contract_Under3M.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Progress\frm_SplashScreen1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Progress\frm_SplashScreen1.Designer.cs">
+      <DependentUpon>frm_SplashScreen1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\LeaveCal.cs" />
+    <Compile Include="Utilities\MyAutoCompleteEditor.cs" />
+    <Compile Include="Utilities\NetworkInterfaces.cs" />
+    <Compile Include="Utilities\SearchTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Utilities\UpdateStatuses.cs" />
+    <Compile Include="Utilities\LongRunningTask.cs" />
+    <Compile Include="Utilities\OvalPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Workingday\frm_WorkingdayFinal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Workingday\frm_WorkingdayFinal.Designer.cs">
+      <DependentUpon>frm_WorkingdayFinal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Contract\SubContract\frm_List_SubContract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Contract\SubContract\frm_List_SubContract.Designer.cs">
+      <DependentUpon>frm_List_SubContract.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Contract\SubContract\frm_Add_SubContract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Contract\SubContract\frm_Add_SubContract.Designer.cs">
+      <DependentUpon>frm_Add_SubContract.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Contract\SubContract\frm_SubContractHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Contract\SubContract\frm_SubContractHistory.Designer.cs">
+      <DependentUpon>frm_SubContractHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Leave\frm_Leave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Leave\frm_Leave.Designer.cs">
+      <DependentUpon>frm_Leave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Leave\frm_Leave_Management.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Leave\frm_Leave_Management.Designer.cs">
+      <DependentUpon>frm_Leave_Management.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Recruitment\Candidate\Contract\frm_CandidateContract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Recruitment\Candidate\Contract\frm_CandidateContract.Designer.cs">
+      <DependentUpon>frm_CandidateContract.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Recruitment\Candidate\frm_CandidateInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Recruitment\Candidate\frm_CandidateInfo.Designer.cs">
+      <DependentUpon>frm_CandidateInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Recruitment\Candidate\frm_CandidateListFinalRound.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Recruitment\Candidate\frm_CandidateListFinalRound.Designer.cs">
+      <DependentUpon>frm_CandidateListFinalRound.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Recruitment\Education_Fee\frm_EducationFee_Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Recruitment\Education_Fee\frm_EducationFee_Add.Designer.cs">
+      <DependentUpon>frm_EducationFee_Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Recruitment\Education_Fee\frm_EducationFee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Recruitment\Education_Fee\frm_EducationFee.Designer.cs">
+      <DependentUpon>frm_EducationFee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SGN\Contract\Contract1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Contract.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\SGN\Contract\Contract_Trial1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Contract_Trial.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\SGN\Contract\Subcontract_Contract.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Subcontract_Contract.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\SGN\Recruitment\Education_Contract.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Education_Contract.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Report Preview\ReportPreview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Report Preview\ReportPreview.Designer.cs">
+      <DependentUpon>ReportPreview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Regulation\frm_Party_Management.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Regulation\frm_Party_Management.Designer.cs">
+      <DependentUpon>frm_Party_Management.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\frm_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\frm_Login.Designer.cs">
+      <DependentUpon>frm_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RadRibbonForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RadRibbonForm.Designer.cs">
+      <DependentUpon>RadRibbonForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\DPI.cs" />
+    <Compile Include="Utilities\MyFilterMenuTreeElement.cs" />
+    <Compile Include="Utilities\MyFilterMenuTreeItem.cs" />
+    <Compile Include="Utilities\MyListFilterPopup.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Utilities\Positioning.cs" />
+    <Compile Include="Utilities\Utilities.cs" />
+    <Compile Include="Progress\frm_WaitForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Progress\frm_WaitForm1.Designer.cs">
+      <DependentUpon>frm_WaitForm1.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Administrations\ChangedLog.resx">
+      <DependentUpon>ChangedLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Bonus\frm_Calculate_Bonus.resx">
+      <DependentUpon>frm_Calculate_Bonus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Bonus\frm_Bonus.resx">
+      <DependentUpon>frm_Bonus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Bonus\frm_ExportBonus.resx">
+      <DependentUpon>frm_ExportBonus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Bonus\frm_ImportBonus.resx">
+      <DependentUpon>frm_ImportBonus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Catalogue\frm_ContractType.resx">
+      <DependentUpon>frm_ContractType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Catalogue\frm_Department.resx">
+      <DependentUpon>frm_Department.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Catalogue\frm_Family.resx">
+      <DependentUpon>frm_Family.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Catalogue\frm_Positions.resx">
+      <DependentUpon>frm_Positions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Catalogue\frm_Family_Add.resx">
+      <DependentUpon>frm_Family_Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Catalogue\frm_LNSCoefficient.resx">
+      <DependentUpon>frm_LNSCoefficient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Catalogue\frm_ScaleOfSalary.resx">
+      <DependentUpon>frm_ScaleOfSalary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Catalogue\frm_Positions_Add.resx">
+      <DependentUpon>frm_Positions_Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Catalogue\frm_ScaleOfSalary_Add.resx">
+      <DependentUpon>frm_ScaleOfSalary_Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Coefficient\frm_Apply_LNSEmployeeToWorkdayFinal.resx">
+      <DependentUpon>frm_Apply_LNSEmployeeToWorkdayFinal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Coefficient\frm_LNSEmployeeCoefficient.resx">
+      <DependentUpon>frm_LNSEmployeeCoefficient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Contract\Contract\frm_List_Contract.resx">
+      <DependentUpon>frm_List_Contract.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Contract\Contract\frm_Add_EmployeeContract.resx">
+      <DependentUpon>frm_Add_EmployeeContract.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Employees\frm_Add_SecurityControl.resx">
+      <DependentUpon>frm_Add_SecurityControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Employees\frm_Employee_Detail.resx">
+      <DependentUpon>frm_Employee_Detail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Employees\frm_Employee_Detail_B1024.resx">
+      <DependentUpon>frm_Employee_Detail_B1024.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Employees\frm_Employee_Working.resx">
+      <DependentUpon>frm_Employee_Working.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Employees\frm_Import_EmployeeSecurityControl.resx">
+      <DependentUpon>frm_Import_EmployeeSecurityControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Employees\frm_SecurityControl.resx">
+      <DependentUpon>frm_SecurityControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Employees\frm_SecurityControlHistory.resx">
+      <DependentUpon>frm_SecurityControlHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Export\CustomExport.resx">
+      <DependentUpon>CustomExport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Export\Employee\frm_Export_EmployeeSubContractList.resx">
+      <DependentUpon>frm_Export_EmployeeSubContractList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Export\Employee\frm_Export_Employees.resx">
+      <DependentUpon>frm_Export_Employees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Export\Employee\frm_Export_EmployeeContractList.resx">
+      <DependentUpon>frm_Export_EmployeeContractList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Export\Employee\frm_Export_SecurityControl.resx">
+      <DependentUpon>frm_Export_SecurityControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Export\Workingday\frm_Export_Workingday.resx">
+      <DependentUpon>frm_Export_Workingday.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Recruitment\Candidate\PreEmployee\frm_Pre_Employee.resx">
+      <DependentUpon>frm_Pre_Employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Salary\frm_CalculateConversionCoefficient.resx">
+      <DependentUpon>frm_CalculateConversionCoefficient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Salary\frm_CalculateSalary.resx">
+      <DependentUpon>frm_CalculateSalary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Salary\frm_CalculateWageFund.resx">
+      <DependentUpon>frm_CalculateWageFund.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Salary\frm_Compare_ListIncomeEmployees.resx">
+      <DependentUpon>frm_Compare_ListIncomeEmployees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Salary\frm_ExportSalary.resx">
+      <DependentUpon>frm_ExportSalary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Salary\frm_ImportSalary.resx">
+      <DependentUpon>frm_ImportSalary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Salary\frm_ListIncomeEmployees.resx">
+      <DependentUpon>frm_ListIncomeEmployees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Salary\frm_ListWageFund.resx">
+      <DependentUpon>frm_ListWageFund.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Statistic\frm_Statistic.resx">
+      <DependentUpon>frm_Statistic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Workingday\frm_AnimatedProgressIndicator.resx">
+      <DependentUpon>frm_AnimatedProgressIndicator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Workingday\frm_CheckSend.resx">
+      <DependentUpon>frm_CheckSend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Workingday\frm_ERROR_WorkingDay.resx">
+      <DependentUpon>frm_ERROR_WorkingDay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Workingday\frm_ExportWorkingday.resx">
+      <DependentUpon>frm_ExportWorkingday.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Workingday\frm_ImportWorkingday.resx">
+      <DependentUpon>frm_ImportWorkingday.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Workingday\frm_WorkingdayFinalDetail.resx">
+      <DependentUpon>frm_WorkingdayFinalDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Workingday\f_Background.resx">
+      <DependentUpon>f_Background.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\frm_DataServer.resx">
+      <DependentUpon>frm_DataServer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Progress\frm_Waiting.resx">
+      <DependentUpon>frm_Waiting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Progress\sf_Background.resx">
+      <DependentUpon>sf_Background.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListSheet.resx">
+      <DependentUpon>ListSheet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Progress\frm_ProgressForm.resx">
+      <DependentUpon>frm_ProgressForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\frm_RLogin.resx">
+      <DependentUpon>frm_RLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CXR\Contract\CXR_Contract.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CXR_Contract.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CXR\Contract\CXR_Contract_Trial.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CXR_Contract_Trial.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CXR\Contract\CXR_Contract_Under3M.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CXR_Contract_Under3M.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CXR\Contract\CXR_Subcontract_Contract.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CXR_Subcontract_Contract.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CXR\Recruitment\CXR_Education_Contract.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CXR_Education_Contract.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\DAD\Contract\DAD_Contract.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>DAD_Contract.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\DAD\Contract\DAD_Contract_Trial.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>DAD_Contract_Trial.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\DAD\Contract\DAD_Contract_Under3M.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>DAD_Contract_Under3M.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\DAD\Contract\DAD_Subcontract_Contract.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>DAD_Subcontract_Contract.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\DAD\Recruitment\DAD_Education_Contract.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>DAD_Education_Contract.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SGN\Contract\Contract_Under3M.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Contract_Under3M.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Workingday\frm_WorkingdayFinal.resx">
+      <DependentUpon>frm_WorkingdayFinal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Contract\SubContract\frm_List_SubContract.resx">
+      <DependentUpon>frm_List_SubContract.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Contract\SubContract\frm_Add_SubContract.resx">
+      <DependentUpon>frm_Add_SubContract.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Contract\SubContract\frm_SubContractHistory.resx">
+      <DependentUpon>frm_SubContractHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Leave\frm_Leave.resx">
+      <DependentUpon>frm_Leave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Leave\frm_Leave_Management.resx">
+      <DependentUpon>frm_Leave_Management.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Recruitment\Candidate\Contract\frm_CandidateContract.resx">
+      <DependentUpon>frm_CandidateContract.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Recruitment\Candidate\frm_CandidateInfo.resx">
+      <DependentUpon>frm_CandidateInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Recruitment\Candidate\frm_CandidateListFinalRound.resx">
+      <DependentUpon>frm_CandidateListFinalRound.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Recruitment\Education_Fee\frm_EducationFee_Add.resx">
+      <DependentUpon>frm_EducationFee_Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Recruitment\Education_Fee\frm_EducationFee.resx">
+      <DependentUpon>frm_EducationFee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SGN\Contract\Contract.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Contract1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SGN\Contract\Contract_Trial.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Contract_Trial1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SGN\Contract\Subcontract_Contract.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Subcontract_Contract.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SGN\Recruitment\Education_Contract.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Education_Contract.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Report Preview\ReportPreview.resx">
+      <DependentUpon>ReportPreview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Regulation\frm_Party_Management.resx">
+      <DependentUpon>frm_Party_Management.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\frm_Login.resx">
+      <DependentUpon>frm_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Progress\frm_WaitForm1.resx">
+      <DependentUpon>frm_WaitForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Abc.snk" />
+    <None Include="App.config" />
+    <None Include="Confuser.crproj">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ConfuserEx.snk" />
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="RadRibbonForm.resx">
+      <DependentUpon>RadRibbonForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Progress\frm_SplashScreen1.resx">
+      <DependentUpon>frm_SplashScreen1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Theme\Office2013Light.tssp" />
+    <EmbeddedResource Include="TVTG.pfx" />
+    <EmbeddedResource Include="Theme\VisualStudio2012Light.tssp" />
+    <EmbeddedResource Include="Theme\TelerikMetroBlue.tssp" />
+    <EmbeddedResource Include="Theme\Windows8.tssp" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save-01-WF.png" />
+    <None Include="Resources\Network-Sharing.png" />
+    <None Include="Resources\gears %281%29.gif" />
+    <None Include="Resources\gears.gif" />
+    <None Include="Resources\gears120.gif" />
+    <None Include="Resources\gears64.gif" />
+    <None Include="Resources\Category.png" />
+    <None Include="Resources\blue-square-mosiac-background_1017-1632.jpg" />
+    <None Include="Resources\SAGS Icon 100 Orange.png" />
+    <None Include="Resources\SAGS Icon 200 Orange.png" />
+    <None Include="Resources\Numbering .png" />
+    <None Include="Resources\For-This-Week.png" />
+    <None Include="Resources\Vietnamese-Dong.png" />
+    <None Include="Resources\Tasks.png" />
+    <None Include="Resources\Export.png" />
+    <None Include="Resources\Device-Calculator.png" />
+    <None Include="Resources\Reading panel-WF.png" />
+    <None Include="Resources\Dollar.png" />
+    <None Include="Resources\filter.png" />
+    <None Include="Resources\Reward-04-WF.png" />
+    <None Include="Resources\Warning-Shield.png" />
+    <None Include="Resources\Factory-WF.png" />
+    <None Include="Resources\House-06-WF.png" />
+    <None Include="Resources\Graduate-Hat.png" />
+    <None Include="Resources\Business-Card-01.png" />
+    <None Include="Resources\image_1064656.gif" />
+    <None Include="Resources\Warning.png" />
+    <None Include="Resources\Information.png" />
+    <None Include="Resources\Error.png" />
+    <None Include="Resources\Animation.gif" />
+    <None Include="Resources\Search-WF.png" />
+    <None Include="Resources\Open.png" />
+    <None Include="Resources\Check-WF.png" />
+    <None Include="Resources\Document Error-WF.png" />
+    <EmbeddedResource Include="Image\windows.png" />
+    <None Include="Resources\SAGS Icon 32x32.png" />
+    <None Include="Resources\Logout.png" />
+    <None Include="Resources\Login_out.png" />
+    <None Include="Resources\Login_in.png" />
+    <None Include="Resources\Login.png" />
+    <None Include="Resources\DayOff.png" />
+    <None Include="Resources\Database.png" />
+    <None Include="Resources\ChangePassword.png" />
+    <None Include="Resources\Login1.png" />
+    <None Include="Resources\Profile.png" />
+    <None Include="Resources\Active_Contract.png" />
+    <None Include="Resources\Expired_Contract.png" />
+    <None Include="Resources\AddContract.png" />
+    <None Include="Resources\Print-Icon.png" />
+    <None Include="Resources\Sub-Contract.png" />
+    <EmbeddedResource Include="Image\2.png" />
+    <EmbeddedResource Include="Image\1.png" />
+    <Content Include="icon-hrm2014.ico" />
+    <Content Include="Image\dark-blue-wallpapers-desktop.jpg" />
+    <Content Include="Image\group.png" />
+    <Content Include="Image\home.png" />
+    <Content Include="Image\3.png" />
+    <None Include="Resources\Salary.png" />
+    <None Include="Resources\DangVien.png" />
+    <None Include="Resources\workingtime_final.png" />
+    <None Include="Resources\Family.png" />
+    <EmbeddedResource Include="Image\icon-hrm2014.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Include="Resources\ExportToXLSX_16x16.png" />
+    <None Include="Resources\Working.png" />
+    <None Include="Resources\Quit.png" />
+    <None Include="Resources\no_image.gif" />
+    <Content Include="Image\Background.jpg" />
+    <EmbeddedResource Include="Image\DefaultUser.jpg" />
+    <Content Include="Image\HRM.png" />
+    <Content Include="Image\img0_1024x768.jpg" />
+    <Content Include="Image\Key.png" />
+    <Content Include="Image\Loading.png" />
+    <Content Include="Image\Profile.png" />
+    <None Include="Resources\LeftRight_32x32.png" />
+    <None Include="Resources\SAGS Icon 100.png" />
+    <None Include="Resources\SAGS Icon 150.png" />
+    <None Include="Resources\SAGS Icon 200.png" />
+    <None Include="Resources\SAGS Icon 280.png" />
+    <None Include="Resources\SAGS Icon.png" />
+    <None Include="Resources\SAGS LOGO 64.png" />
+    <None Include="Resources\Employee.png" />
+    <None Include="Resources\User-Delete-WF.png" />
+    <None Include="Resources\File Lock-WF.png" />
+    <None Include="Resources\Paper.png" />
+    <None Include="Resources\Security groups-WF.png" />
+    <None Include="Resources\Calculator-WF.png" />
+    <None Include="Resources\Format Bullet1-WF.png" />
+    <None Include="Resources\House-05-WF.png" />
+    <None Include="Resources\Employee2.png" />
+    <None Include="Resources\File Lock-WF1.png" />
+    <None Include="Resources\Paper1.png" />
+    <None Include="Resources\Member Security Gr.-WF.png" />
+    <None Include="Resources\Calendar Favorite-WF.png" />
+    <None Include="Resources\Abacus-WF .png" />
+    <None Include="Resources\View-List.png" />
+    <None Include="Resources\Money Coin-02-WF.png" />
+    <None Include="Resources\Share-03.png" />
+    <None Include="Resources\Excel Export .png" />
+    <None Include="Resources\ID-Information.png" />
+    <None Include="Resources\Dialog-Box-About.png" />
+    <None Include="Resources\Sync-WF.png" />
+    <None Include="Resources\Insert Column Right_01.png" />
+    <None Include="Resources\Add.png" />
+    <None Include="Resources\Delete.png" />
+    <None Include="Resources\Edit.png" />
+    <None Include="Resources\Preview.png" />
+    <None Include="Resources\Print.png" />
+    <None Include="Resources\Refresh.png" />
+    <None Include="Resources\Nine.png" />
+    <None Include="Resources\One.png" />
+    <None Include="Resources\History.png" />
+    <None Include="Resources\File.png" />
+    <None Include="Resources\Import.png" />
+    <Content Include="Image\SAGS_Soft_Icon.png" />
+    <Content Include="Image\Untitled-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="AESm">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="log4net">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="stdole">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Telerik.WinControls.ChartView">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AESm\AESm.csproj">
+      <Project>{ce3f4ca7-5ba9-4d29-adfb-60e2723d2377}</Project>
+      <Name>AESm</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HRMBLL\HRMBLL.csproj">
+      <Project>{a26740a5-3bfd-4aef-8c17-1c377a0f878e}</Project>
+      <Name>HRMBLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HRMDAL\HRMDAL.csproj">
+      <Project>{b190bd77-0be9-4345-8106-7c2c21f737fa}</Project>
+      <Name>HRMDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HRMUtil\HRMUtil.csproj">
+      <Project>{3f1c1d37-f352-488f-9a43-44bf0cd3a1c3}</Project>
+      <Name>HRMUtil</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>if exist "$(TargetPath).locked" del "$(TargetPath).locked"
+if exist "$(TargetPath)" if not exist "$(TargetPath).locked" move "$(TargetPath)" "$(TargetPath).locked"
+</PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <!--<Target Name="AfterCompile">
+    <Exec Command="if &quot;$(PlatformName)&quot; == &quot;AnyCPU&quot; (if &quot;$(ConfigurationName)&quot; == &quot;Release&quot; (powershell.exe  -ExecutionPolicy Bypass -File  &quot;$(ProjectDir)confuserEx\confuserps.ps1&quot; &quot;'C:\Program Files\ConfuserEx\Confuser.CLI.exe'&quot; &quot;'$(ProjectDir)confuserEx\confuser.crproj'&quot; &quot;'$(ProjectDir)obj\$(ConfigurationName)\'&quot; &quot;'$(ProjectDir)obj\$(ConfigurationName)\$(TargetFileName)'&quot; &quot;'aggressive'&quot; &quot;'$(ProjectDir)HRMBLL\bin\Release\HRMBLL.dll'&quot; &quot;'$(ProjectDir)HRMDAL\bin\Release\HRMDAL.dll'&quot; &quot;'$(ProjectDir)HRMUtil\bin\Release\HRMUtil.dll'&quot; &quot;'$(ProjectDir)Locations\bin\Release\Locations.dll'&quot; )&#xD;&#xA;) else (if &quot;$(ConfigurationName)&quot; == &quot;Release&quot; (powershell.exe  -ExecutionPolicy Bypass -File  &quot;$(ProjectDir)confuserEx\confuserps.ps1&quot; &quot;'C:\Program Files\ConfuserEx\Confuser.CLI.exe'&quot; &quot;'$(ProjectDir)confuserEx\confuser.crproj'&quot; &quot;'$(ProjectDir)obj\$(PlatformName)\$(ConfigurationName)\'&quot; &quot;'$(ProjectDir)obj\$(PlatformName)\$(ConfigurationName)\$(TargetFileName)'&quot; &quot;'aggressive'&quot; &quot;'$(ProjectDir)HRMBLL\bin\Release\HRMBLL.dll'&quot; &quot;'$(ProjectDir)HRMDAL\bin\Release\HRMDAL.dll'&quot; &quot;'$(ProjectDir)HRMUtil\bin\Release\HRMUtil.dll'&quot; &quot;'$(ProjectDir)Locations\bin\Release\Locations.dll'&quot; )&#xD;&#xA;)" />
+  </Target>-->
+  <!--<Target Name="AfterCompile">
+    <Exec Command="if &quot;$(PlatformName)&quot; == &quot;AnyCPU&quot; (if &quot;$(ConfigurationName)&quot; == &quot;Release&quot; (powershell.exe  -ExecutionPolicy Bypass -File  &quot;$(ProjectDir)confuserEx\confuserps.ps1&quot; &quot;'C:\Program Files\ConfuserEx\Confuser.CLI.exe'&quot; &quot;'$(ProjectDir)confuserEx\confuser.crproj'&quot; &quot;'$(ProjectDir)obj\$(ConfigurationName)\'&quot; &quot;'$(ProjectDir)obj\$(ConfigurationName)\$(TargetFileName)'&quot; &quot;'aggressive'&quot; &quot;'$(ProjectDir)HRMBLL\bin\Release\HRMBLL.dll'&quot; &quot;'$(ProjectDir)HRMDAL\bin\Release\HRMDAL.dll'&quot; &quot;'$(ProjectDir)HRMUtil\bin\Release\HRMUtil.dll'&quot; &quot;'$(ProjectDir)DLL\AESm.dll'&quot; )&#xD;&#xA;) else (if &quot;$(ConfigurationName)&quot; == &quot;Release&quot; (powershell.exe  -ExecutionPolicy Bypass -File  &quot;$(ProjectDir)confuserEx\confuserps.ps1&quot; &quot;'C:\Program Files\ConfuserEx\Confuser.CLI.exe'&quot; &quot;'$(ProjectDir)confuserEx\confuser.crproj'&quot; &quot;'$(ProjectDir)obj\$(PlatformName)\$(ConfigurationName)\'&quot; &quot;'$(ProjectDir)obj\$(PlatformName)\$(ConfigurationName)\$(TargetFileName)'&quot; &quot;'aggressive'&quot; &quot;'$(ProjectDir)HRMBLL\bin\Release\HRMBLL.dll'&quot; &quot;'$(ProjectDir)HRMDAL\bin\Release\HRMDAL.dll'&quot; &quot;'$(ProjectDir)HRMUtil\bin\Release\HRMUtil.dll'&quot; &quot;'$(ProjectDir)DLL\AESm.dll'&quot; )&#xD;&#xA;)" />
+  </Target>-->
+</Project>

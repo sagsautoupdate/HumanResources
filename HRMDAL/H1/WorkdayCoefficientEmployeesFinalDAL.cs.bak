@@ -1,0 +1,506 @@
+﻿using System;
+using System.Data;
+using System.Data.SqlClient;
+using System.Diagnostics;
+
+using HRMUtil;
+using HRMDAL.Utilities;
+using HRMUtil.KeyNames.H1;
+
+namespace HRMDAL.H1
+{
+    public class WorkdayCoefficientEmployeesFinalDAL : Dao
+    {
+
+        #region insert, update, delete
+
+        public long Insert(int UserId, DateTime	DataDate, string Day1, string Day2,	string Day3, string Day4, string Day5, string Day6, string Day7, string Day8, string Day9, string Day10, 
+                            string Day11,string Day12, string Day13, string Day14, string Day15, string Day16, string Day17, string Day18, string Day19, string Day20,
+	                        string Day21, string Day22, string Day23, string Day24, string Day25, string Day26, string Day27, string Day28, string Day29, string Day30, string Day31,
+	                        double NCQD, double NCDC, double X, double OmDNBHXH, double Om, double OmDN, double KHH, double Co, double TS, double ST, double Khamthai, double TNLD, double F, double Diduong, double CTac, double Fdb,
+	                        double H1, double H2, double H3, double H4, double h5, double H6, double H7, double DinhChiCT, double Ro, double Ko, double LamthemNTbngay, double LamthemCNbngay, double LamthemLTbngay, double LamthemNTbdem,
+	                        double LamthemCNbdem, double LamthemLTbdem, double Lamdem, DateTime CreateDate, int CreateUserId, DateTime UpdateDate, int UpdateUserId, string Remark)
+        {
+            long identity = 0;
+            Debug.Assert(sproc == null);
+            try
+            {
+                SqlParameter[] param = 
+				{                                       
+                    new SqlParameter("@UserId", SqlDbType.Int),
+	                new SqlParameter("@DataDate", SqlDbType.DateTime, 8),
+	                new SqlParameter("@Day1", SqlDbType.VarChar, 20),
+	                new SqlParameter("@Day2", SqlDbType.VarChar, 20),
+	                new SqlParameter("@Day3", SqlDbType.VarChar, 20),
+	                new SqlParameter("@Day4", SqlDbType.VarChar, 20),
+	                new SqlParameter("@Day5", SqlDbType.VarChar, 20),
+	                new SqlParameter("@Day6", SqlDbType.VarChar, 20),
+	                new SqlParameter("@Day7", SqlDbType.VarChar, 20),
+	                new SqlParameter("@Day8", SqlDbType.VarChar, 20),
+	                new SqlParameter("@Day9", SqlDbType.VarChar, 20),
+	                new SqlParameter("@Day10", SqlDbType.VarChar, 20),
+	                new SqlParameter("@Day11", SqlDbType.VarChar, 20),
+	                new SqlParameter("@Day12", SqlDbType.VarChar, 20),
+	                new SqlParameter("@Day13", SqlDbType.VarChar, 20),
+	                new SqlParameter("@Day14", SqlDbType.VarChar, 20),
+	                new SqlParameter("@Day15", SqlDbType.VarChar, 20),
+	                new SqlParameter("@Day16", SqlDbType.VarChar, 20),
+	                new SqlParameter("@Day17", SqlDbType.VarChar, 20),
+	                new SqlParameter("@Day18", SqlDbType.VarChar, 20),
+	                new SqlParameter("@Day19", SqlDbType.VarChar, 20),
+	                new SqlParameter("@Day20", SqlDbType.VarChar, 20),
+	                new SqlParameter("@Day21", SqlDbType.VarChar, 20),
+	                new SqlParameter("@Day22", SqlDbType.VarChar, 20),
+	                new SqlParameter("@Day23", SqlDbType.VarChar, 20),
+	                new SqlParameter("@Day24", SqlDbType.VarChar, 20),
+	                new SqlParameter("@Day25", SqlDbType.VarChar, 20),
+	                new SqlParameter("@Day26", SqlDbType.VarChar, 20),
+	                new SqlParameter("@Day27", SqlDbType.VarChar, 20),
+	                new SqlParameter("@Day28", SqlDbType.VarChar, 20),
+	                new SqlParameter("@Day29", SqlDbType.VarChar, 20),
+	                new SqlParameter("@Day30", SqlDbType.VarChar, 20),
+	                new SqlParameter("@Day31", SqlDbType.VarChar, 20),
+	                new SqlParameter("@NCQD", SqlDbType.Float),
+	                new SqlParameter("@NCDC", SqlDbType.Float),
+	                new SqlParameter("@X", SqlDbType.Float),
+	                new SqlParameter("@OmDNBHXH", SqlDbType.Float),
+	                new SqlParameter("@Om", SqlDbType.Float),
+	                new SqlParameter("@OmDN", SqlDbType.Float),
+	                new SqlParameter("@KHH", SqlDbType.Float),
+	                new SqlParameter("@Co", SqlDbType.Float),
+	                new SqlParameter("@TS", SqlDbType.Float),
+	                new SqlParameter("@ST", SqlDbType.Float),
+	                new SqlParameter("@Khamthai", SqlDbType.Float),
+	                new SqlParameter("@TNLD", SqlDbType.Float),
+	                new SqlParameter("@F", SqlDbType.Float),
+	                new SqlParameter("@Diduong", SqlDbType.Float),
+	                new SqlParameter("@CTac", SqlDbType.Float),
+	                new SqlParameter("@Fdb", SqlDbType.Float),
+	                new SqlParameter("@H1", SqlDbType.Float),
+	                new SqlParameter("@H2", SqlDbType.Float),
+	                new SqlParameter("@H3", SqlDbType.Float),
+	                new SqlParameter("@H4", SqlDbType.Float),
+	                new SqlParameter("@h5", SqlDbType.Float),
+	                new SqlParameter("@H6", SqlDbType.Float),
+	                new SqlParameter("@H7", SqlDbType.Float),
+	                new SqlParameter("@DinhChiCT", SqlDbType.Float),
+	                new SqlParameter("@Ro", SqlDbType.Float),
+	                new SqlParameter("@Ko", SqlDbType.Float),
+	                new SqlParameter("@LamthemNTbngay", SqlDbType.Float),
+	                new SqlParameter("@LamthemCNbngay", SqlDbType.Float),
+	                new SqlParameter("@LamthemLTbngay", SqlDbType.Float),
+	                new SqlParameter("@LamthemNTbdem", SqlDbType.Float),
+	                new SqlParameter("@LamthemCNbdem", SqlDbType.Float),
+	                new SqlParameter("@LamthemLTbdem", SqlDbType.Float),
+	                new SqlParameter("@Lamdem", SqlDbType.Float),
+	                new SqlParameter("@CreateDate", SqlDbType.DateTime, 8),
+	                new SqlParameter("@CreateUserId", SqlDbType.Int),
+	                new SqlParameter("@UpdateDate", SqlDbType.DateTime, 8),
+	                new SqlParameter("@UpdateUserId", SqlDbType.Int),
+	                new SqlParameter("@Remark", SqlDbType.NVarChar,1000),
+				};
+
+
+
+                param[0].Value = UserId;
+                param[1].Value = DataDate;
+                param[2].Value = Day1;
+                param[3].Value = Day2;
+                param[4].Value = Day3;
+                param[5].Value = Day4;
+                param[6].Value = Day5;
+                param[7].Value = Day6;
+                param[8].Value = Day7;
+                param[9].Value = Day8;
+                param[10].Value = Day9;
+                param[11].Value = Day10;
+                param[12].Value = Day11;
+                param[13].Value = Day12;
+                param[14].Value = Day13;
+                param[15].Value = Day14;
+                param[16].Value = Day15;
+                param[17].Value = Day16;
+                param[18].Value = Day17;
+                param[19].Value = Day18;
+                param[20].Value = Day19;
+                param[21].Value = Day20;
+                param[22].Value = Day21;
+                param[23].Value = Day22;
+                param[24].Value = Day23;
+                param[25].Value = Day24;
+                param[26].Value = Day25;
+                param[27].Value = Day26;
+                param[28].Value = Day27;
+                param[29].Value = Day28;
+                param[30].Value = Day29;
+                param[31].Value = Day30;
+                param[32].Value = Day31;
+                param[33].Value = NCQD;
+                param[34].Value = NCDC;
+                param[35].Value = X;
+                param[36].Value = OmDNBHXH;
+                param[37].Value = Om;
+                param[38].Value = OmDN;
+                param[39].Value = KHH;
+                param[40].Value = Co;
+                param[41].Value = TS;
+                param[42].Value = ST;
+                param[43].Value = Khamthai;
+                param[44].Value = TNLD;
+                param[45].Value = F;
+                param[46].Value = Diduong;
+                param[47].Value = CTac;
+                param[48].Value = Fdb;
+                param[49].Value = H1;
+                param[50].Value = H2;
+                param[51].Value = H3;
+                param[52].Value = H4;
+                param[53].Value = h5;
+                param[54].Value = H6;
+                param[55].Value = H7;
+                param[56].Value = DinhChiCT;
+                param[57].Value = Ro;
+                param[58].Value = Ko;
+                param[59].Value = LamthemNTbngay;
+                param[60].Value = LamthemCNbngay;
+                param[61].Value = LamthemLTbngay;
+                param[62].Value = LamthemNTbdem;
+                param[63].Value = LamthemCNbdem;
+                param[64].Value = LamthemLTbdem;
+                param[65].Value = Lamdem;
+                param[66].Value = CreateDate;
+                param[67].Value = CreateUserId;
+                param[68].Value = UpdateDate;
+                param[69].Value = UpdateUserId;
+                param[70].Value = Remark;
+                sproc = new StoreProcedure(WorkdayCoefficientEmployeesFinalKeys.Sp_Ins_H1_WorkdayEmployeeFinal, param);
+                identity = sproc.Run();
+                sproc.Commit();
+            }
+            catch (SqlException se)
+            {
+                sproc.RollBack();
+                throw new HRMException(se.Message, se.Number);
+            }
+            finally
+            {
+                sproc.Dispose();
+            }
+            return identity;
+        }
+
+
+        public long ImportFromExcelACV(string ACVId, DateTime DataDate, string Day1, string Day2, string Day3, string Day4, string Day5, string Day6, string Day7, string Day8, string Day9, string Day10,
+                          string Day11, string Day12, string Day13, string Day14, string Day15, string Day16, string Day17, string Day18, string Day19, string Day20,
+                          string Day21, string Day22, string Day23, string Day24, string Day25, string Day26, string Day27, string Day28, string Day29, string Day30, string Day31,
+                          double NCQD, double NCDC, double X, double OmDNBHXH, double Om, double OmDN, double KHH, double Co, double TS, double ST, double Khamthai, double TNLD, double F, double Diduong, double CTac, double Fdb,
+                          double H1, double H2, double H3, double H4, double H5, double H6, double H7, double DinhChiCT, double Ro, double Ko, double LamthemNTbngay, double LamthemCNbngay, double LamthemLTbngay, double LamthemNTbdem,
+                          double LamthemCNbdem, double LamthemLTbdem, double Lamdem,                        
+	                      double HSLNS, double HSLNSPCTN, double HSLCB, double HSPCDH, double HSPCTN, double HSPCKV, double HSPCCV, double HSK, double DTNopThue, double NguoiPThuoc,
+                          DateTime CreateDate, int CreateUserId, DateTime UpdateDate, int UpdateUserId, string Remark, int UserId)
+        {
+            long identity = 0;
+            Debug.Assert(sproc == null);
+            try
+            {
+                SqlParameter[] param = 
+				{                                       
+                    new SqlParameter("@ACVId", SqlDbType.VarChar, 50),
+	                new SqlParameter("@DataDate", SqlDbType.DateTime, 8),
+	                new SqlParameter("@Day1", SqlDbType.VarChar, 20),
+	                new SqlParameter("@Day2", SqlDbType.VarChar, 20),
+	                new SqlParameter("@Day3", SqlDbType.VarChar, 20),
+	                new SqlParameter("@Day4", SqlDbType.VarChar, 20),
+	                new SqlParameter("@Day5", SqlDbType.VarChar, 20),
+	                new SqlParameter("@Day6", SqlDbType.VarChar, 20),
+	                new SqlParameter("@Day7", SqlDbType.VarChar, 20),
+	                new SqlParameter("@Day8", SqlDbType.VarChar, 20),
+	                new SqlParameter("@Day9", SqlDbType.VarChar, 20),
+	                new SqlParameter("@Day10", SqlDbType.VarChar, 20),
+	                new SqlParameter("@Day11", SqlDbType.VarChar, 20),
+	                new SqlParameter("@Day12", SqlDbType.VarChar, 20),
+	                new SqlParameter("@Day13", SqlDbType.VarChar, 20),
+	                new SqlParameter("@Day14", SqlDbType.VarChar, 20),
+	                new SqlParameter("@Day15", SqlDbType.VarChar, 20),
+	                new SqlParameter("@Day16", SqlDbType.VarChar, 20),
+	                new SqlParameter("@Day17", SqlDbType.VarChar, 20),
+	                new SqlParameter("@Day18", SqlDbType.VarChar, 20),
+	                new SqlParameter("@Day19", SqlDbType.VarChar, 20),
+	                new SqlParameter("@Day20", SqlDbType.VarChar, 20),
+	                new SqlParameter("@Day21", SqlDbType.VarChar, 20),
+	                new SqlParameter("@Day22", SqlDbType.VarChar, 20),
+	                new SqlParameter("@Day23", SqlDbType.VarChar, 20),
+	                new SqlParameter("@Day24", SqlDbType.VarChar, 20),
+	                new SqlParameter("@Day25", SqlDbType.VarChar, 20),
+	                new SqlParameter("@Day26", SqlDbType.VarChar, 20),
+	                new SqlParameter("@Day27", SqlDbType.VarChar, 20),
+	                new SqlParameter("@Day28", SqlDbType.VarChar, 20),
+	                new SqlParameter("@Day29", SqlDbType.VarChar, 20),
+	                new SqlParameter("@Day30", SqlDbType.VarChar, 20),
+	                new SqlParameter("@Day31", SqlDbType.VarChar, 20),
+	                new SqlParameter("@NCQD", SqlDbType.Float),
+	                new SqlParameter("@NCDC", SqlDbType.Float),
+	                new SqlParameter("@X", SqlDbType.Float),
+	                new SqlParameter("@OmDNBHXH", SqlDbType.Float),
+	                new SqlParameter("@Om", SqlDbType.Float),
+	                new SqlParameter("@OmDN", SqlDbType.Float),
+	                new SqlParameter("@KHH", SqlDbType.Float),
+	                new SqlParameter("@Co", SqlDbType.Float),
+	                new SqlParameter("@TS", SqlDbType.Float),
+	                new SqlParameter("@ST", SqlDbType.Float),
+	                new SqlParameter("@Khamthai", SqlDbType.Float),
+	                new SqlParameter("@TNLD", SqlDbType.Float),
+	                new SqlParameter("@F", SqlDbType.Float),
+	                new SqlParameter("@Diduong", SqlDbType.Float),
+	                new SqlParameter("@CTac", SqlDbType.Float),
+	                new SqlParameter("@Fdb", SqlDbType.Float),
+	                new SqlParameter("@H1", SqlDbType.Float),
+	                new SqlParameter("@H2", SqlDbType.Float),
+	                new SqlParameter("@H3", SqlDbType.Float),
+	                new SqlParameter("@H4", SqlDbType.Float),
+	                new SqlParameter("@H5", SqlDbType.Float),
+	                new SqlParameter("@H6", SqlDbType.Float),
+	                new SqlParameter("@H7", SqlDbType.Float),
+	                new SqlParameter("@DinhChiCT", SqlDbType.Float),
+	                new SqlParameter("@Ro", SqlDbType.Float),
+	                new SqlParameter("@Ko", SqlDbType.Float),
+	                new SqlParameter("@LamthemNTbngay", SqlDbType.Float),
+	                new SqlParameter("@LamthemCNbngay", SqlDbType.Float),
+	                new SqlParameter("@LamthemLTbngay", SqlDbType.Float),
+	                new SqlParameter("@LamthemNTbdem", SqlDbType.Float),
+	                new SqlParameter("@LamthemCNbdem", SqlDbType.Float),
+	                new SqlParameter("@LamthemLTbdem", SqlDbType.Float),
+	                new SqlParameter("@Lamdem", SqlDbType.Float),                    
+	                new SqlParameter("@HSLNS", SqlDbType.Float),
+	                new SqlParameter("@HSLNSPCTN", SqlDbType.Float),
+	                new SqlParameter("@HSLCB", SqlDbType.Float),
+	                new SqlParameter("@HSPCDH", SqlDbType.Float),
+	                new SqlParameter("@HSPCTN", SqlDbType.Float),
+	                new SqlParameter("@HSPCKV", SqlDbType.Float),
+	                new SqlParameter("@HSPCCV", SqlDbType.Float),
+	                new SqlParameter("@HSK", SqlDbType.Float),
+	                new SqlParameter("@DTNopThue", SqlDbType.Float),
+	                new SqlParameter("@NguoiPThuoc", SqlDbType.Float),
+	                new SqlParameter("@CreateDate", SqlDbType.DateTime, 8),
+	                new SqlParameter("@CreateUserId", SqlDbType.Int),
+	                new SqlParameter("@UpdateDate", SqlDbType.DateTime, 8),
+	                new SqlParameter("@UpdateUserId", SqlDbType.Int),
+	                new SqlParameter("@Remark", SqlDbType.NVarChar,1000),
+                    new SqlParameter("@UserId", SqlDbType.Int)
+				};
+
+
+
+                param[0].Value = ACVId;
+                param[1].Value = DataDate;
+                param[2].Value = Day1;
+                param[3].Value = Day2;
+                param[4].Value = Day3;
+                param[5].Value = Day4;
+                param[6].Value = Day5;
+                param[7].Value = Day6;
+                param[8].Value = Day7;
+                param[9].Value = Day8;
+                param[10].Value = Day9;
+                param[11].Value = Day10;
+                param[12].Value = Day11;
+                param[13].Value = Day12;
+                param[14].Value = Day13;
+                param[15].Value = Day14;
+                param[16].Value = Day15;
+                param[17].Value = Day16;
+                param[18].Value = Day17;
+                param[19].Value = Day18;
+                param[20].Value = Day19;
+                param[21].Value = Day20;
+                param[22].Value = Day21;
+                param[23].Value = Day22;
+                param[24].Value = Day23;
+                param[25].Value = Day24;
+                param[26].Value = Day25;
+                param[27].Value = Day26;
+                param[28].Value = Day27;
+                param[29].Value = Day28;
+                param[30].Value = Day29;
+                param[31].Value = Day30;
+                param[32].Value = Day31;
+                param[33].Value = NCQD;
+                param[34].Value = NCDC;
+                param[35].Value = X;
+                param[36].Value = OmDNBHXH;
+                param[37].Value = Om;
+                param[38].Value = OmDN;
+                param[39].Value = KHH;
+                param[40].Value = Co;
+                param[41].Value = TS;
+                param[42].Value = ST;
+                param[43].Value = Khamthai;
+                param[44].Value = TNLD;
+                param[45].Value = F;
+                param[46].Value = Diduong;
+                param[47].Value = CTac;
+                param[48].Value = Fdb;
+                param[49].Value = H1;
+                param[50].Value = H2;
+                param[51].Value = H3;
+                param[52].Value = H4;
+                param[53].Value = H5;
+                param[54].Value = H6;
+                param[55].Value = H7;
+                param[56].Value = DinhChiCT;
+                param[57].Value = Ro;
+                param[58].Value = Ko;
+                param[59].Value = LamthemNTbngay;
+                param[60].Value = LamthemCNbngay;
+                param[61].Value = LamthemLTbngay;
+                param[62].Value = LamthemNTbdem;
+                param[63].Value = LamthemCNbdem;
+                param[64].Value = LamthemLTbdem;
+                param[65].Value = Lamdem;                
+	            param[66].Value = HSLNS;
+	            param[67].Value = HSLNSPCTN;
+	            param[68].Value = HSLCB;
+	            param[69].Value = HSPCDH;
+	            param[70].Value = HSPCTN;
+	            param[71].Value = HSPCKV;
+	            param[72].Value = HSPCCV;
+	            param[73].Value = HSK;
+	            param[74].Value = DTNopThue;
+                param[75].Value = NguoiPThuoc;
+                param[76].Value = CreateDate;
+                param[77].Value = CreateUserId;
+                param[78].Value = UpdateDate;
+                param[79].Value = UpdateUserId;
+                param[80].Value = Remark;
+                param[81].Value = UserId;
+                sproc = new StoreProcedure(WorkdayCoefficientEmployeesFinalKeys.Sp_Imp_H1_WorkdayCoefficientEmployeeFinal, param);
+                identity = sproc.Run();
+                sproc.Commit();
+            }
+            catch (SqlException se)
+            {
+                sproc.RollBack();
+                throw new HRMException(se.Message, se.Number);
+            }
+            finally
+            {
+                sproc.Dispose();
+            }
+            return identity;
+        }
+
+        public long UpdateByCalculateConversionCoefficient(double NCHLNS, double HSQDNCHL, double HSTLNS, DateTime DataDate, DateTime UpdateDate, int UpdateUserId, string Remark, int UserId)
+        {
+            long identity = 0;
+            Debug.Assert(sproc == null);
+            try
+            {
+                SqlParameter[] param = 
+				{                                       	                
+	                new SqlParameter("@NCHLNS", SqlDbType.Float),
+	                new SqlParameter("@HSQDNCHL", SqlDbType.Float),
+	                new SqlParameter("@HSTLNS", SqlDbType.Float),
+	                new SqlParameter("@DataDate", SqlDbType.DateTime, 8),
+                    new SqlParameter("@UpdateDate", SqlDbType.DateTime, 8),
+	                new SqlParameter("@UpdateUserId", SqlDbType.Int),
+	                new SqlParameter("@Remark", SqlDbType.NVarChar,1000),
+                    new SqlParameter("@UserId", SqlDbType.Int)
+				};
+
+
+
+                param[0].Value = NCHLNS;
+                param[1].Value = HSQDNCHL;
+                param[2].Value = HSTLNS;
+                param[3].Value = DataDate;
+                param[4].Value = UpdateDate;
+                param[5].Value = UpdateUserId;
+                param[6].Value = Remark;
+                param[7].Value = UserId;
+
+                sproc = new StoreProcedure(WorkdayCoefficientEmployeesFinalKeys.Sp_Upd_H1_WorkdayCoefficientEmployeeFinalByCalculateConversionCoefficient, param);
+                identity = sproc.Run();
+                sproc.Commit();
+            }
+            catch (SqlException se)
+            {
+                sproc.RollBack();
+                throw new HRMException(se.Message, se.Number);
+            }
+            finally
+            {
+                sproc.Dispose();
+            }
+            return identity;
+        }
+
+
+
+        #endregion
+
+        #region GET       
+
+
+        public DataTable GetByDataDate(DateTime dataDate, int IsVCQLNC)
+        {
+
+            Debug.Assert(sproc == null);
+
+            DataTable dt = new DataTable(); ;
+            try
+            {
+                SqlParameter[] param = 
+                {
+                    new SqlParameter("@DataDate",SqlDbType.DateTime),
+                    new SqlParameter("@IsVCQLNC",SqlDbType.Int)
+                    
+                };
+                param[0].Value = dataDate;
+                param[1].Value = IsVCQLNC;
+
+                sproc = new StoreProcedure(WorkdayCoefficientEmployeesFinalKeys.Sp_Sel_H1_WorkdayCoefficientEmployeesFinal_By_DataDate, param);
+                sproc.RunFill(dt);
+                sproc.Dispose();
+            }
+            catch (SqlException se)
+            {
+                throw new HRMException(se.Message, se.Number);
+            }
+
+            return dt;
+
+        }
+
+        public DataTable GetByDataDateForDetail(DateTime dataDate, int IsVCQLNC)
+        {
+
+            Debug.Assert(sproc == null);
+
+            DataTable dt = new DataTable(); ;
+            try
+            {
+                SqlParameter[] param = 
+                {
+                    new SqlParameter("@DataDate",SqlDbType.DateTime),
+                    new SqlParameter("@IsVCQLNC",SqlDbType.Int)
+                    
+                };
+                param[0].Value = dataDate;
+                param[1].Value = IsVCQLNC;
+
+                sproc = new StoreProcedure(WorkdayCoefficientEmployeesFinalKeys.Sp_Sel_H1_WorkdayCoefficientEmployeesFinal_By_DataDate_For_Detail, param);
+                sproc.RunFill(dt);
+                sproc.Dispose();
+            }
+            catch (SqlException se)
+            {
+                throw new HRMException(se.Message, se.Number);
+            }
+
+            return dt;
+
+        }
+
+        #endregion
+    }
+}

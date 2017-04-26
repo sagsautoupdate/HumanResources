@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="15.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B190BD77-0BE9-4345-8106-7C2C21F737FA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HRMDAL</RootNamespace>
+    <AssemblyName>HRMDAL</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="H0\DepartmentEmployeeDAL.cs" />
+    <Compile Include="H0\DepartmentPositionDAL.cs" />
+    <Compile Include="H0\DepartmentsDAL.cs" />
+    <Compile Include="H0\EmployeeContractCoefficientDAL.cs" />
+    <Compile Include="H0\EmployeeEducationLevelsDAL.cs" />
+    <Compile Include="H0\EmployeeIdiFingerPrintDAL.cs" />
+    <Compile Include="H0\EmployeeJobHistoryDAL.cs" />
+    <Compile Include="H0\EmployeeRelationDAL.cs" />
+    <Compile Include="H0\EmployeesDAL.cs" />
+    <Compile Include="H0\EmployeeSubContractDAL.cs" />
+    <Compile Include="H0\EmployeeTimeBillDAL.cs" />
+    <Compile Include="H0\HolidaysDAL.cs" />
+    <Compile Include="H0\LeaveTypesDAL.cs" />
+    <Compile Include="H0\PositionsDAL.cs" />
+    <Compile Include="H0\RelationTypesDAL.cs" />
+    <Compile Include="H0\RoleUsersDAL.cs" />
+    <Compile Include="H0\SecurityControlDAL.cs" />
+    <Compile Include="H0\SiteMapDAL.cs" />
+    <Compile Include="H0\Statistic\STAEmployeeDAL.cs" />
+    <Compile Include="H1\BonusEmployeeConditionDAL.cs" />
+    <Compile Include="H1\BonusEmployeesDAL.cs" />
+    <Compile Include="H1\BonusTitleDAL.cs" />
+    <Compile Include="H1\CoefficientEmployeeFinalDAL.cs" />
+    <Compile Include="H1\CoefficientEmployeesDAL.cs" />
+    <Compile Include="H0\ContractTypesDAL.cs" />
+    <Compile Include="H0\EmployeeLeaveDAL.cs" />
+    <Compile Include="H0\EmployeeContractDAL.cs" />
+    <Compile Include="H1\CoefficientNamePositionsDAL.cs" />
+    <Compile Include="H1\CoefficientTypeDAL.cs" />
+    <Compile Include="H1\IncomeEmployees.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IncomeEmployees.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="H1\LNSEmployeeCoefficientDAL.cs" />
+    <Compile Include="H1\PregnantAllownceDAL.cs" />
+    <Compile Include="H1\HTCVCatalogueDAL.cs" />
+    <Compile Include="H1\HTCVEmployeeDAL.cs" />
+    <Compile Include="H1\IncomeEmployeesDAL.cs" />
+    <Compile Include="H1\LCBCoefficientEmployeesDAL.cs" />
+    <Compile Include="H1\LNSCoefficientEmployeesDAL.cs" />
+    <Compile Include="H1\CoefficientLevelsDAL.cs" />
+    <Compile Include="H1\CoefficientNamesDAL.cs" />
+    <Compile Include="H1\CoefficientValuesDAL.cs" />
+    <Compile Include="H1\PITDeductionDAL.cs" />
+    <Compile Include="H1\SalaryRegulationDAL.cs" />
+    <Compile Include="H1\ScaleOfSalariesDAL.cs" />
+    <Compile Include="H1\UnitPriceDetailsDAL.cs" />
+    <Compile Include="H1\WageFundsDAL.cs" />
+    <Compile Include="H1\WorkdayEmployeesDAL.cs" />
+    <Compile Include="H1\WorkdayEmployeesDALL.cs" />
+    <Compile Include="H1\WorkdayCoefficientEmployeesFinalDAL.cs" />
+    <Compile Include="H1\WorkdayPrivilegeDAL.cs" />
+    <Compile Include="H2\CandidateContractionsDAL.cs" />
+    <Compile Include="H2\CandidateEducationLevelsDAL.cs" />
+    <Compile Include="H2\CandidatesDAL.cs" />
+    <Compile Include="H2\CandidateTrainingJobHistoryDAL.cs" />
+    <Compile Include="H2\EducationFeeDAL.cs" />
+    <Compile Include="H2\EducationLevelsDAL.cs" />
+    <Compile Include="H2\SessionsDAL.cs" />
+    <Compile Include="H3\DecisionEmployeesDAL.cs" />
+    <Compile Include="H3\DecisionsDAL.cs" />
+    <Compile Include="H4\RepresentativeDAL.cs" />
+    <Compile Include="H\AdministrationDAL.cs" />
+    <Compile Include="H\BonusNamesDAL.cs" />
+    <Compile Include="H\BonusValuesDAL.cs" />
+    <Compile Include="H\BulletinDAL.cs" />
+    <Compile Include="H\CoefficientsDAL.cs" />
+    <Compile Include="H\CommandLogDAL.cs" />
+    <Compile Include="H\EmployeeIncomeDAL.cs" />
+    <Compile Include="H\IncomesMonthDAL.cs" />
+    <Compile Include="H\TimeKeepingDAL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="Utilities\Dao.cs" />
+    <Compile Include="Utilities\HRMConfig.cs" />
+    <Compile Include="Utilities\StoreProcedure.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="H1\IncomeEmployees.xsc">
+      <DependentUpon>IncomeEmployees.xsd</DependentUpon>
+    </None>
+    <None Include="H1\IncomeEmployees.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>IncomeEmployees.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="H1\IncomeEmployees.xss">
+      <DependentUpon>IncomeEmployees.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AESm\AESm.csproj">
+      <Project>{ce3f4ca7-5ba9-4d29-adfb-60e2723d2377}</Project>
+      <Name>AESm</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HRMUtil\HRMUtil.csproj">
+      <Project>{3F1C1D37-F352-488F-9A43-44BF0CD3A1C3}</Project>
+      <Name>HRMUtil</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

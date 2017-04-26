@@ -1,0 +1,10 @@
+﻿<project outputDir="{OutputDir}" baseDir="{BaseDir}" xmlns="http://confuser.codeplex.com">
+  <rule pattern="true" preset="aggressive" />
+  <module path="{TargetFileName}">
+    <rule pattern="true" preset="aggressive" />
+  </module>
+  <probePath>{ProbePath1}</probePath>
+  <probePath>{ProbePath2}</probePath>
+  <probePath>{ProbePath3}</probePath>
+  <probePath>{ProbePath4}</probePath>
+</project>

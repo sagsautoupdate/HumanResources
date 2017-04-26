@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="_UpgradeWizard_Files\UpgradeWizardLog.xslt"?>
+<log>
+  <event action="Analyze" type="Success" name="Assembly References" path="F:\HumanResources\HumanResources\HumanResources.csproj" />
+  <event action="Analyze" type="Success" name="ChangedLog.resx" path="F:\HumanResources\HumanResources\Administrations\ChangedLog.resx" />
+  <event action="Analyze" type="Success" name="Assembly References" path="F:\HumanResources\HumanResources\App.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="F:\HumanResources\HumanResources\App.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="F:\HumanResources\HumanResources\App.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="F:\HumanResources\HumanResources\App.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="F:\HumanResources\HumanResources\App.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="F:\HumanResources\HumanResources\App.config" />
+  <event action="Analyze" type="Success" name="App.config" path="F:\HumanResources\HumanResources\App.config" />
+  <event action="Analyze" type="Success" name="frm_ScaleOfSalary.resx" path="F:\HumanResources\HumanResources\Forms\Catalogue\frm_ScaleOfSalary.resx" />
+  <event action="Analyze" type="Success" name="frm_SubContract.resx" path="F:\HumanResources\HumanResources\Forms\Contract\frm_SubContract.resx" />
+  <event action="Analyze" type="Success" name="frm_SubContractHistory.resx" path="F:\HumanResources\HumanResources\Forms\Contract\frm_SubContractHistory.resx" />
+  <event action="Analyze" type="Success" name="frm_Leave.resx" path="F:\HumanResources\HumanResources\Forms\Leave\frm_Leave.resx" />
+  <event action="Analyze" type="Success" name="frm_Leave_Management.resx" path="F:\HumanResources\HumanResources\Forms\Leave\frm_Leave_Management.resx" />
+  <event action="Analyze" type="Success" name="frm_CandidateContract.resx" path="F:\HumanResources\HumanResources\Forms\Recruitment\Computing_English_Appearance\frm_CandidateContract.resx" />
+  <event action="Analyze" type="Success" name="frm_CandidateInfo.resx" path="F:\HumanResources\HumanResources\Forms\Recruitment\Computing_English_Appearance\frm_CandidateInfo.resx" />
+  <event action="Analyze" type="Success" name="frm_CandidateListFinalRound.resx" path="F:\HumanResources\HumanResources\Forms\Recruitment\Computing_English_Appearance\frm_CandidateListFinalRound.resx" />
+  <event action="Analyze" type="Success" name="frm_Party_Management.resx" path="F:\HumanResources\HumanResources\Forms\Regulation\frm_Party_Management.resx" />
+  <event action="Analyze" type="Success" name="Login.resx" path="F:\HumanResources\HumanResources\Login.resx" />
+  <event action="Analyze" type="Success" name="Assembly References" path="F:\HumanResources\HumanResources\packages.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="F:\HumanResources\HumanResources\packages.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="F:\HumanResources\HumanResources\packages.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="F:\HumanResources\HumanResources\packages.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="F:\HumanResources\HumanResources\packages.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="F:\HumanResources\HumanResources\packages.config" />
+  <event action="Analyze" type="Success" name="packages.config" path="F:\HumanResources\HumanResources\packages.config" />
+  <event action="Analyze" type="Success" name="Resources.resx" path="F:\HumanResources\HumanResources\Properties\Resources.resx" />
+  <event action="Analyze" type="Success" name="RadRibbonForm.resx" path="F:\HumanResources\HumanResources\RadRibbonForm.resx" />
+  <event action="Analyze" type="Success" name="ReportPreview.resx" path="F:\HumanResources\HumanResources\Reports\Report Preview\ReportPreview.resx" />
+  <event action="Analyze" type="Success" name="SplashScreen1.resx" path="F:\HumanResources\HumanResources\SplashScreen1.resx" />
+  <event action="Analyze" type="Success" name="WaitForm1.resx" path="F:\HumanResources\HumanResources\WaitForm1.resx" />
+  <event action="Analyze" type="Success" name="HumanResources" path="F:\HumanResources\HumanResources\HumanResources.csproj" />
+  <event action="Analyze" type="Success" name="Assembly References" path="F:\HumanResources\HRMBLL\HRMBLL.csproj" />
+  <event action="Analyze" type="Success" name="HRMBLL" path="F:\HumanResources\HRMBLL\HRMBLL.csproj" />
+  <event action="Analyze" type="Success" name="Assembly References" path="F:\HumanResources\HRMDAL\HRMDAL.csproj" />
+  <event action="Analyze" type="Success" name="Assembly References" path="F:\HumanResources\HRMDAL\app.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="F:\HumanResources\HRMDAL\app.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="F:\HumanResources\HRMDAL\app.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="F:\HumanResources\HRMDAL\app.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="F:\HumanResources\HRMDAL\app.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="F:\HumanResources\HRMDAL\app.config" />
+  <event action="Analyze" type="Success" name="app.config" path="F:\HumanResources\HRMDAL\app.config" />
+  <event action="Analyze" type="Success" name="HRMDAL" path="F:\HumanResources\HRMDAL\HRMDAL.csproj" />
+  <event action="Analyze" type="Success" name="Assembly References" path="F:\HumanResources\HRMUtil\HRMUtil.csproj" />
+  <event action="Analyze" type="Success" name="HRMUtil" path="F:\HumanResources\HRMUtil\HRMUtil.csproj" />
+  <event action="Analyze" type="Success" name="HumanResources" path="F:\HumanResources\HumanResources.sln" />
+</log>
